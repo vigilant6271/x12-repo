@@ -1,0 +1,187 @@
+name: X12 Repo Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: 'Space-separated package list (empty = all)'
+        required: false
+        default: ''
+      arch:
+        description: 'Target architecture'
+        required: true
+        default: 'aarch64'
+        type: choice
+        options: [aarch64, arm, x86_64]
+
+env:
+  TERMUX_PREFIX: /data/data/com.termux/files/usr
+  REPO_URL: https://github.com/x12-repo/x12-repo
+
+jobs:
+
+  # ── Build X12 Engine ──────────────────────────────────────────────────
+  build-engine:
+    name: Build libx12engine
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        arch: [aarch64, arm, x86_64]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Termux build tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y clang lld make binutils
+
+      - name: Install Android NDK
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r26d
+
+      - name: Build libx12engine (${{ matrix.arch }})
+        run: |
+          make -C engine/ TARGET_ARCH=${{ matrix.arch }} all
+          ls -la engine/build/
+
+      - name: Upload engine artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: libx12engine-${{ matrix.arch }}
+          path: engine/build/
+
+  # ── Validate all build.sh files ───────────────────────────────────────
+  validate-packages:
+    name: Validate package build scripts
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get install -y shellcheck
+
+      - name: Validate build.sh syntax (bash -n)
+        run: |
+          errors=0
+          total=0
+          for f in packages/*/build.sh; do
+            total=$((total+1))
+            if ! bash -n "$f" 2>/dev/null; then
+              echo "SYNTAX ERROR: $f"
+              errors=$((errors+1))
+            fi
+          done
+          echo "Validated $total files, $errors errors"
+          [ "$errors" -eq 0 ]
+
+      - name: Count packages by type
+        run: |
+          python3 -c "
+          import json
+          stats = json.load(open('packages/_stats.json'))
+          print(f'Total: {stats[\"total\"]}')
+          print(f'CMake: {stats[\"cmake\"]}')
+          print(f'Meson: {stats[\"meson\"]}')
+          print(f'Autotools: {stats[\"autotools\"]}')
+          for t,c in sorted(stats[\"by_type\"].items(), key=lambda x:-x[1]):
+              print(f'  {t}: {c}')
+          "
+
+  # ── Build sample packages ─────────────────────────────────────────────
+  build-samples:
+    name: Build sample packages
+    needs: build-engine
+    runs-on: ubuntu-22.04
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [aarch64]
+        package: [alacritty, dolphin, epiphany, deadbeef, awesome]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download engine
+        uses: actions/download-artifact@v4
+        with:
+          name: libx12engine-${{ matrix.arch }}
+          path: engine/build/
+
+      - name: Set up Termux build environment
+        run: |
+          # Install termux-packages build tools
+          sudo apt-get install -y python3 curl wget zip unzip cmake ninja-build
+          pip3 install termux-build-package 2>/dev/null || true
+
+      - name: Dry-run build ${{ matrix.package }}
+        run: |
+          python3 ci/orchestrator.py \
+            --packages ${{ matrix.package }} \
+            --arch ${{ matrix.arch }} \
+            --dry-run
+
+  # ── Regenerate repo indexes ────────────────────────────────────────────
+  update-repo:
+    name: Update APT repo indexes
+    needs: [validate-packages]
+    runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild repo indexes
+        run: python3 scripts/build_repo.py
+
+      - name: Verify Release file
+        run: |
+          cat repo/dists/x12/Release
+          echo "---"
+          wc -l repo/dists/x12/main/binary-aarch64/Packages
+
+      - name: Commit updated indexes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: update APT repo indexes [skip ci]"
+          file_pattern: "repo/dists/**"
+
+  # ── Full parallel build (manual trigger) ──────────────────────────────
+  full-build:
+    name: Full package build
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'workflow_dispatch'
+    needs: build-engine
+    strategy:
+      matrix:
+        arch: [aarch64, arm, x86_64]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download engine
+        uses: actions/download-artifact@v4
+        with:
+          name: libx12engine-${{ matrix.arch }}
+          path: engine/build/
+
+      - name: Build packages
+        run: |
+          PKGS="${{ github.event.inputs.packages }}"
+          if [ -n "$PKGS" ]; then
+            python3 ci/orchestrator.py \
+              --packages $PKGS \
+              --arch ${{ matrix.arch }} \
+              --jobs 8
+          else
+            python3 ci/orchestrator.py \
+              --arch ${{ matrix.arch }} \
+              --jobs 8
+          fi
+
+      - name: Upload build report
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-report-${{ matrix.arch }}
+          path: ci/build_report.json

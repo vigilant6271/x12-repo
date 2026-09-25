@@ -1,0 +1,163 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# x12-wrap — X12 adaptive launcher wrapper
+# ==========================================
+# Every x12-repo package is launched through this wrapper.
+# It detects hardware state, sets optimal environment variables,
+# then exec's the real binary.
+#
+# Usage: x12-wrap <package_type> <real_binary> [args...]
+#   package_type: gui|game|media|browser|ide|wm|terminal|tool|library
+
+set -euo pipefail
+
+X12_PKG_TYPE="${1:-generic}"
+X12_BINARY="${2:?Usage: x12-wrap <type> <binary> [args...]}"
+shift 2
+X12_ARGS=("$@")
+
+# ── Helper: read sysfs int ─────────────────────────────────────────────
+_sysfs_int() { [ -r "$1" ] && cat "$1" 2>/dev/null || echo "${2:-0}"; }
+_sysfs_str() { [ -r "$1" ] && cat "$1" 2>/dev/null || echo "${2:-}"; }
+
+# ── 1. DETECT HARDWARE ────────────────────────────────────────────────
+CPU_CORES=$(nproc 2>/dev/null || echo 4)
+CPU_FREQ_MAX=$(_sysfs_int /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq 0)
+RAM_TOTAL_KB=$(awk '/MemTotal/{print $2}' /proc/meminfo 2>/dev/null || echo 2097152)
+RAM_AVAIL_KB=$(awk '/MemAvailable/{print $2}' /proc/meminfo 2>/dev/null || echo 1048576)
+THERMAL_TEMP=$(_sysfs_int /sys/class/thermal/thermal_zone0/temp 0)
+BATTERY_CAP=$(_sysfs_int /sys/class/power_supply/battery/capacity -1)
+BATTERY_STAT=$(_sysfs_str /sys/class/power_supply/battery/status "Unknown")
+
+HAS_VULKAN=0
+[ -e /dev/dri/renderD128 ] && HAS_VULKAN=1
+HAS_GPU=0
+[ -e /dev/dri/card0 ] || [ -e /dev/dri/renderD128 ] && HAS_GPU=1
+
+ARCH=$(uname -m)
+
+# ── 2. THERMAL / BATTERY → PERF MODE ─────────────────────────────────
+# Mode: 0=power_save 1=balanced 2=performance 3=turbo
+TEMP_C=$(( THERMAL_TEMP / 1000 ))
+IS_PLUGGED=0
+[[ "$BATTERY_STAT" =~ ^(Charging|Full)$ ]] && IS_PLUGGED=1
+[ "$BATTERY_CAP" -lt 0 ] 2>/dev/null && IS_PLUGGED=1
+
+PERF_MODE=1   # default: balanced
+
+if   [ "$TEMP_C" -ge 80 ] 2>/dev/null; then
+    PERF_MODE=0
+elif [ "$RAM_TOTAL_KB" -lt 2097152 ] 2>/dev/null; then
+    PERF_MODE=0
+elif [ "$BATTERY_CAP" -ge 0 ] && [ "$BATTERY_CAP" -lt 20 ] 2>/dev/null; then
+    PERF_MODE=0
+elif [ "$TEMP_C" -ge 70 ] 2>/dev/null; then
+    PERF_MODE=1
+elif [ "$BATTERY_CAP" -ge 0 ] && [ "$BATTERY_CAP" -lt 40 ] && [ "$IS_PLUGGED" -eq 0 ] 2>/dev/null; then
+    PERF_MODE=1
+elif [ "$IS_PLUGGED" -eq 1 ] && [ "$TEMP_C" -le 50 ] && [ "$CPU_CORES" -ge 6 ] 2>/dev/null; then
+    PERF_MODE=3
+elif [ "$IS_PLUGGED" -eq 1 ] || [ "$TEMP_C" -le 40 ] 2>/dev/null; then
+    PERF_MODE=2
+fi
+
+# ── 3. DERIVE THREAD COUNT ─────────────────────────────────────────────
+case "$PERF_MODE" in
+  0) THREADS=$(( CPU_CORES > 2 ? 2 : 1 ))   ;;  # power save
+  1) THREADS=$(( CPU_CORES / 2 ))             ;;  # balanced
+  2) THREADS=$CPU_CORES                       ;;  # performance
+  3) THREADS=$CPU_CORES                       ;;  # turbo
+  *) THREADS=2                                ;;
+esac
+[ "$THREADS" -lt 1 ] && THREADS=1
+
+# ── 4. RENDER BACKEND ─────────────────────────────────────────────────
+RENDER_BACKEND="xrender"
+case "$X12_PKG_TYPE" in
+  game)
+    [ "$HAS_VULKAN" -eq 1 ] && [ "$PERF_MODE" -ge 2 ] && RENDER_BACKEND="vulkan" || \
+    { [ "$HAS_GPU"  -eq 1 ] && RENDER_BACKEND="gles"; } ;;
+  media)
+    [ "$HAS_GPU"    -eq 1 ] && RENDER_BACKEND="gles" || RENDER_BACKEND="cpu"    ;;
+  browser|ide)
+    [ "$HAS_GPU"    -eq 1 ] && [ "$PERF_MODE" -ge 1 ] && RENDER_BACKEND="gles" || \
+                                                           RENDER_BACKEND="xrender" ;;
+  wm|terminal)
+    RENDER_BACKEND="xrender"                                                     ;;
+  *)
+    [ "$HAS_GPU"    -eq 1 ] && RENDER_BACKEND="gles" || RENDER_BACKEND="cpu"   ;;
+esac
+
+# ── 5. SET ENVIRONMENT ────────────────────────────────────────────────
+
+# OpenMP threads
+export OMP_NUM_THREADS="$THREADS"
+export GOMP_SPINCOUNT=0
+
+# Mesa / software GL
+export MESA_NO_ERROR=1
+export LIBGL_ALWAYS_SOFTWARE=0
+[ "$HAS_GPU" -eq 0 ] && export LIBGL_ALWAYS_SOFTWARE=1
+
+# Vulkan
+export VK_LOADER_DRIVERS_SELECT="*"
+[ "$HAS_VULKAN" -eq 0 ] && export VK_ICD_FILENAMES=""
+
+# GTK
+export GDK_BACKEND="x11"
+export GTK_ENABLE_OVERLAY_SCROLLBAR=1
+case "$PERF_MODE" in
+  0|1) export GTK_SMOOTH_SCROLL=0 ;;
+  2|3) export GTK_SMOOTH_SCROLL=1 ;;
+esac
+
+# Qt
+export QT_QPA_PLATFORM="xcb"
+export QT_ENABLE_HIGHDPI_SCALING=1
+case "$PERF_MODE" in
+  0)   export QT_SCALE_FACTOR=1; export QT_AUTO_SCREEN_SCALE_FACTOR=0 ;;
+  1|2) export QT_AUTO_SCREEN_SCALE_FACTOR=1 ;;
+  3)   export QT_AUTO_SCREEN_SCALE_FACTOR=1 ;;
+esac
+
+# Clutter / Mutter
+export CLUTTER_VBLANK=none
+[ "$PERF_MODE" -ge 2 ] && export CLUTTER_VBLANK=evdev
+
+# Firefox / Chromium
+case "$X12_PKG_TYPE" in
+  browser)
+    export MOZ_X11_EGL=1
+    export MOZ_DISABLE_RDD_SANDBOX=1
+    [ "$HAS_GPU" -eq 1 ] && export MOZ_ENABLE_WAYLAND=0
+    export CHROMIUM_FLAGS="--disable-gpu-sandbox --enable-accelerated-video-decode"
+    ;;
+esac
+
+# Audio latency
+export PULSE_LATENCY_MSEC=60
+[ "$PERF_MODE" -ge 2 ] && export PULSE_LATENCY_MSEC=30
+
+# Java / Electron
+export _JAVA_OPTIONS="-XX:+UseG1GC -XX:MaxGCPauseMillis=50 -Xss4m"
+case "$PERF_MODE" in
+  0) export _JAVA_OPTIONS="$_JAVA_OPTIONS -Xmx256m" ;;
+  1) export _JAVA_OPTIONS="$_JAVA_OPTIONS -Xmx512m" ;;
+  2) export _JAVA_OPTIONS="$_JAVA_OPTIONS -Xmx1g"   ;;
+  3) export _JAVA_OPTIONS="$_JAVA_OPTIONS -Xmx2g"   ;;
+esac
+
+# X12 engine signals (picked up by libx12engine.so via LD_PRELOAD)
+export X12_PERF_MODE="$PERF_MODE"
+export X12_THREADS="$THREADS"
+export X12_RENDER="$RENDER_BACKEND"
+export X12_PKG="$X12_PKG_TYPE"
+export X12_ARCH="$ARCH"
+
+# ── 6. LD_PRELOAD x12 engine ──────────────────────────────────────────
+X12_LIB="${PREFIX:-/data/data/com.termux/files/usr}/lib/libx12engine.so"
+if [ -f "$X12_LIB" ]; then
+    export LD_PRELOAD="${LD_PRELOAD:+$LD_PRELOAD:}$X12_LIB"
+fi
+
+# ── 7. EXEC REAL BINARY ───────────────────────────────────────────────
+exec "$X12_BINARY" "${X12_ARGS[@]}"

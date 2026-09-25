@@ -1,0 +1,5731 @@
+{
+  "total": 952,
+  "cmake": 151,
+  "meson": 70,
+  "autotools": 731,
+  "by_type": {
+    "game": 28,
+    "wm": 21,
+    "generic": 472,
+    "gui": 228,
+    "library": 105,
+    "terminal": 43,
+    "media": 27,
+    "browser": 10,
+    "ide": 18
+  },
+  "packages": [
+    {
+      "name": "1oom",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/1oom"
+    },
+    {
+      "name": "2bwm",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/2bwm"
+    },
+    {
+      "name": "abiword",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/abiword"
+    },
+    {
+      "name": "accessibility-inspector",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/accessibility-inspector"
+    },
+    {
+      "name": "adwaita-icon-theme-legacy",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/adwaita-icon-theme-legacy"
+    },
+    {
+      "name": "adwaita-icon-theme",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/adwaita-icon-theme"
+    },
+    {
+      "name": "akonadi-calendar-tools",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-calendar-tools"
+    },
+    {
+      "name": "akonadi-calendar",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-calendar"
+    },
+    {
+      "name": "akonadi-contacts",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-contacts"
+    },
+    {
+      "name": "akonadi-import-wizard",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-import-wizard"
+    },
+    {
+      "name": "akonadi-mime",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-mime"
+    },
+    {
+      "name": "akonadi-search",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi-search"
+    },
+    {
+      "name": "akonadi",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadi"
+    },
+    {
+      "name": "akonadiconsole",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/akonadiconsole"
+    },
+    {
+      "name": "akregator",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/akregator"
+    },
+    {
+      "name": "alacritty",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/alacritty"
+    },
+    {
+      "name": "alligator",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/alligator"
+    },
+    {
+      "name": "amberol",
+      "type": "media",
+      "build_system": "cmake",
+      "binary": "bin/amberol"
+    },
+    {
+      "name": "analitza",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/analitza"
+    },
+    {
+      "name": "angelfish",
+      "type": "browser",
+      "build_system": "cmake",
+      "binary": "bin/angelfish"
+    },
+    {
+      "name": "appstream-glib",
+      "type": "terminal",
+      "build_system": "meson",
+      "binary": "bin/appstream-glib"
+    },
+    {
+      "name": "arc-gtk-theme",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/arc-gtk-theme"
+    },
+    {
+      "name": "ardour",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/ardour"
+    },
+    {
+      "name": "arianna",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/arianna"
+    },
+    {
+      "name": "ark",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/ark"
+    },
+    {
+      "name": "arqiver",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/arqiver"
+    },
+    {
+      "name": "artikulate",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/artikulate"
+    },
+    {
+      "name": "at-spi2-atk",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/at-spi2-atk"
+    },
+    {
+      "name": "aterm",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/aterm"
+    },
+    {
+      "name": "atk",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/atk"
+    },
+    {
+      "name": "atril",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/atril"
+    },
+    {
+      "name": "audacious-plugins",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/audacious-plugins"
+    },
+    {
+      "name": "audacious",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/audacious"
+    },
+    {
+      "name": "audacity",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/audacity"
+    },
+    {
+      "name": "audiotube",
+      "type": "media",
+      "build_system": "cmake",
+      "binary": "bin/audiotube"
+    },
+    {
+      "name": "aurorae",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/aurorae"
+    },
+    {
+      "name": "awesome-luajit",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/awesome-luajit"
+    },
+    {
+      "name": "awesome",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/awesome"
+    },
+    {
+      "name": "ayatana-ido",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/ayatana-ido"
+    },
+    {
+      "name": "azpainter",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/azpainter"
+    },
+    {
+      "name": "baloo-widgets",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/baloo-widgets"
+    },
+    {
+      "name": "bamf",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/bamf"
+    },
+    {
+      "name": "bdftopcf",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/bdftopcf"
+    },
+    {
+      "name": "blinken",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/blinken"
+    },
+    {
+      "name": "bluefish",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/bluefish"
+    },
+    {
+      "name": "bochs",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/bochs"
+    },
+    {
+      "name": "box2d",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/box2d"
+    },
+    {
+      "name": "breeze-gtk",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/breeze-gtk"
+    },
+    {
+      "name": "breeze",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/breeze"
+    },
+    {
+      "name": "browsh",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/browsh"
+    },
+    {
+      "name": "bspwm",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/bspwm"
+    },
+    {
+      "name": "cairo-dock-core",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/cairo-dock-core"
+    },
+    {
+      "name": "caja-actions",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/caja-actions"
+    },
+    {
+      "name": "caja-extensions",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/caja-extensions"
+    },
+    {
+      "name": "caja",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/caja"
+    },
+    {
+      "name": "calendarsupport",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/calendarsupport"
+    },
+    {
+      "name": "calligra",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/calligra"
+    },
+    {
+      "name": "calligraplan",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/calligraplan"
+    },
+    {
+      "name": "cantor",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/cantor"
+    },
+    {
+      "name": "carbonyl-host-tools",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/carbonyl-host-tools"
+    },
+    {
+      "name": "carbonyl",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/carbonyl"
+    },
+    {
+      "name": "celluloid",
+      "type": "media",
+      "build_system": "meson",
+      "binary": "bin/celluloid"
+    },
+    {
+      "name": "cherrytree",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/cherrytree"
+    },
+    {
+      "name": "chocolate-doom",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/chocolate-doom"
+    },
+    {
+      "name": "chromium-host-tools",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/chromium-host-tools"
+    },
+    {
+      "name": "chromium",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/chromium"
+    },
+    {
+      "name": "cinnamon-control-center",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon-control-center"
+    },
+    {
+      "name": "cinnamon-desktop",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon-desktop"
+    },
+    {
+      "name": "cinnamon-menus",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon-menus"
+    },
+    {
+      "name": "cinnamon-session",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon-session"
+    },
+    {
+      "name": "cinnamon-settings-daemon",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon-settings-daemon"
+    },
+    {
+      "name": "cinnamon",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/cinnamon"
+    },
+    {
+      "name": "cjs",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/cjs"
+    },
+    {
+      "name": "clutter-gst",
+      "type": "terminal",
+      "build_system": "meson",
+      "binary": "bin/clutter-gst"
+    },
+    {
+      "name": "clutter-gtk",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/clutter-gtk"
+    },
+    {
+      "name": "clutter",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/clutter"
+    },
+    {
+      "name": "code-oss",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/code-oss"
+    },
+    {
+      "name": "codeblocks",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/codeblocks"
+    },
+    {
+      "name": "codelldb",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/codelldb"
+    },
+    {
+      "name": "cogl",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/cogl"
+    },
+    {
+      "name": "crow-translate",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/crow-translate"
+    },
+    {
+      "name": "cuse",
+      "type": "generic",
+      "build_system": "meson",
+      "binary": "bin/cuse"
+    },
+    {
+      "name": "cutechess",
+      "type": "game",
+      "build_system": "cmake",
+      "binary": "bin/cutechess"
+    },
+    {
+      "name": "darktable",
+      "type": "media",
+      "build_system": "cmake",
+      "binary": "bin/darktable"
+    },
+    {
+      "name": "dbeaver",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/dbeaver"
+    },
+    {
+      "name": "dbus-glib",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/dbus-glib"
+    },
+    {
+      "name": "dconf-editor",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/dconf-editor"
+    },
+    {
+      "name": "dconf",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/dconf"
+    },
+    {
+      "name": "deadbeef",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/deadbeef"
+    },
+    {
+      "name": "desktop-file-utils",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/desktop-file-utils"
+    },
+    {
+      "name": "devilspie",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/devilspie"
+    },
+    {
+      "name": "devilspie2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/devilspie2"
+    },
+    {
+      "name": "dia",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/dia"
+    },
+    {
+      "name": "dmenu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/dmenu"
+    },
+    {
+      "name": "dolphin",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/dolphin"
+    },
+    {
+      "name": "dosbox-x",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/dosbox-x"
+    },
+    {
+      "name": "dosbox",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/dosbox"
+    },
+    {
+      "name": "drawy",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/drawy"
+    },
+    {
+      "name": "dunst",
+      "type": "terminal",
+      "build_system": "meson",
+      "binary": "bin/dunst"
+    },
+    {
+      "name": "dwm",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/dwm"
+    },
+    {
+      "name": "e16",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/e16"
+    },
+    {
+      "name": "electron-for-code-oss",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/electron-for-code-oss"
+    },
+    {
+      "name": "electron-host-tools-for-code-oss",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/electron-host-tools-for-code-oss"
+    },
+    {
+      "name": "elisa",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/elisa"
+    },
+    {
+      "name": "emacs-exwm",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/emacs-exwm"
+    },
+    {
+      "name": "emacs-x",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/emacs"
+    },
+    {
+      "name": "emacs-xelb",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/emacs-xelb"
+    },
+    {
+      "name": "engrampa",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/engrampa"
+    },
+    {
+      "name": "eog",
+      "type": "media",
+      "build_system": "meson",
+      "binary": "bin/eog"
+    },
+    {
+      "name": "eom",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/eom"
+    },
+    {
+      "name": "epiphany",
+      "type": "browser",
+      "build_system": "meson",
+      "binary": "bin/epiphany"
+    },
+    {
+      "name": "eventviews",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/eventviews"
+    },
+    {
+      "name": "evince",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/evince"
+    },
+    {
+      "name": "eww",
+      "type": "generic",
+      "build_system": "meson",
+      "binary": "bin/eww"
+    },
+    {
+      "name": "exo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/exo"
+    },
+    {
+      "name": "extra-cmake-modules",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/extra-cmake-modules"
+    },
+    {
+      "name": "falkon",
+      "type": "browser",
+      "build_system": "cmake",
+      "binary": "bin/falkon"
+    },
+    {
+      "name": "far2l",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/far2l"
+    },
+    {
+      "name": "fcitx5-chinese-addons",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-chinese-addons"
+    },
+    {
+      "name": "fcitx5-configtool",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-configtool"
+    },
+    {
+      "name": "fcitx5-gtk-common",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/fcitx5-gtk-common"
+    },
+    {
+      "name": "fcitx5-hangul",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-hangul"
+    },
+    {
+      "name": "fcitx5-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-qt"
+    },
+    {
+      "name": "fcitx5-rime",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-rime"
+    },
+    {
+      "name": "fcitx5-unikey",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5-unikey"
+    },
+    {
+      "name": "fcitx5",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/fcitx5"
+    },
+    {
+      "name": "feathernotes",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/feathernotes"
+    },
+    {
+      "name": "featherpad",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/featherpad"
+    },
+    {
+      "name": "feh",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/feh"
+    },
+    {
+      "name": "ffplay",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ffplay"
+    },
+    {
+      "name": "file-roller",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/file-roller"
+    },
+    {
+      "name": "filelight",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/filelight"
+    },
+    {
+      "name": "firefox",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/firefox"
+    },
+    {
+      "name": "firefoxpwa",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/firefoxpwa"
+    },
+    {
+      "name": "flacon",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/flacon"
+    },
+    {
+      "name": "flameshot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/flameshot"
+    },
+    {
+      "name": "flaresolverr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/flaresolverr"
+    },
+    {
+      "name": "florence",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/florence"
+    },
+    {
+      "name": "fltk",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/fltk"
+    },
+    {
+      "name": "fluent-gtk-theme",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/fluent-gtk-theme"
+    },
+    {
+      "name": "fluent-icon-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/fluent-icon-theme"
+    },
+    {
+      "name": "fluxbox",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/fluxbox"
+    },
+    {
+      "name": "fontforge-gtk",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/fontforge-gtk"
+    },
+    {
+      "name": "foot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/foot"
+    },
+    {
+      "name": "freeglut",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/freeglut"
+    },
+    {
+      "name": "freerdp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/freerdp"
+    },
+    {
+      "name": "fritzing",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/fritzing"
+    },
+    {
+      "name": "futuresql",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/futuresql"
+    },
+    {
+      "name": "fvwm",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/fvwm"
+    },
+    {
+      "name": "galculator",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/galculator"
+    },
+    {
+      "name": "garcon",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/garcon"
+    },
+    {
+      "name": "gcr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gcr"
+    },
+    {
+      "name": "gcr4",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gcr4"
+    },
+    {
+      "name": "geany-plugins",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/geany-plugins"
+    },
+    {
+      "name": "geany",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/geany"
+    },
+    {
+      "name": "gedit",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/gedit"
+    },
+    {
+      "name": "geoclue",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/geoclue"
+    },
+    {
+      "name": "geocode-glib",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/geocode-glib"
+    },
+    {
+      "name": "ghex",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ghex"
+    },
+    {
+      "name": "ghostwriter",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/ghostwriter"
+    },
+    {
+      "name": "gigolo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gigolo"
+    },
+    {
+      "name": "gimp-resynthesizer",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/gimp-resynthesizer"
+    },
+    {
+      "name": "gimp",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/gimp"
+    },
+    {
+      "name": "gjots2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gjots2"
+    },
+    {
+      "name": "glade",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/glade"
+    },
+    {
+      "name": "glaxnimate",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/glaxnimate"
+    },
+    {
+      "name": "glew",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/glew"
+    },
+    {
+      "name": "glfw",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/glfw"
+    },
+    {
+      "name": "glmark2",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/glmark2"
+    },
+    {
+      "name": "glslviewer",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/glslviewer"
+    },
+    {
+      "name": "glu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/glu"
+    },
+    {
+      "name": "gnome-backgrounds",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-backgrounds"
+    },
+    {
+      "name": "gnome-calculator",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-calculator"
+    },
+    {
+      "name": "gnome-clocks",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-clocks"
+    },
+    {
+      "name": "gnome-common",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-common"
+    },
+    {
+      "name": "gnome-desktop3",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-desktop3"
+    },
+    {
+      "name": "gnome-desktop4",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-desktop4"
+    },
+    {
+      "name": "gnome-font-viewer",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-font-viewer"
+    },
+    {
+      "name": "gnome-keyring",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-keyring"
+    },
+    {
+      "name": "gnome-menus",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-menus"
+    },
+    {
+      "name": "gnome-screenshot",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-screenshot"
+    },
+    {
+      "name": "gnome-terminal",
+      "type": "terminal",
+      "build_system": "meson",
+      "binary": "bin/gnome-terminal"
+    },
+    {
+      "name": "gnome-text-editor",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-text-editor"
+    },
+    {
+      "name": "gnome-themes-extra",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gnome-themes-extra"
+    },
+    {
+      "name": "gnucash",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gnucash"
+    },
+    {
+      "name": "gnumeric",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gnumeric"
+    },
+    {
+      "name": "godot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/godot"
+    },
+    {
+      "name": "goffice",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/goffice"
+    },
+    {
+      "name": "gpg-crypter",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gpg-crypter"
+    },
+    {
+      "name": "gpicview",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gpicview"
+    },
+    {
+      "name": "grafx2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/grafx2"
+    },
+    {
+      "name": "grantlee-editor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/grantlee-editor"
+    },
+    {
+      "name": "grantleetheme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/grantleetheme"
+    },
+    {
+      "name": "gsettings-desktop-schemas",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gsettings-desktop-schemas"
+    },
+    {
+      "name": "gsound",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gsound"
+    },
+    {
+      "name": "gspell",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gspell"
+    },
+    {
+      "name": "gtk-doc",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk-doc"
+    },
+    {
+      "name": "gtk-layer-shell",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk-layer-shell"
+    },
+    {
+      "name": "gtk2-engines-murrine",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk2-engines-murrine"
+    },
+    {
+      "name": "gtk2",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk2"
+    },
+    {
+      "name": "gtk3-nocsd",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk3-nocsd"
+    },
+    {
+      "name": "gtk3",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk3"
+    },
+    {
+      "name": "gtk4",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtk4"
+    },
+    {
+      "name": "gtkmm2",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtkmm2"
+    },
+    {
+      "name": "gtkmm3",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtkmm3"
+    },
+    {
+      "name": "gtkmm4",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtkmm4"
+    },
+    {
+      "name": "gtksourceview3",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtksourceview3"
+    },
+    {
+      "name": "gtksourceview4",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtksourceview4"
+    },
+    {
+      "name": "gtksourceview5",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtksourceview5"
+    },
+    {
+      "name": "gtkwave",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/gtkwave"
+    },
+    {
+      "name": "gucharmap",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gucharmap"
+    },
+    {
+      "name": "gvfs",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gvfs"
+    },
+    {
+      "name": "gw",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/gw"
+    },
+    {
+      "name": "gwenview",
+      "type": "media",
+      "build_system": "cmake",
+      "binary": "bin/gwenview"
+    },
+    {
+      "name": "handbrake",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/handbrake"
+    },
+    {
+      "name": "hangover-wine",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/hangover-wine"
+    },
+    {
+      "name": "heimer",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/heimer"
+    },
+    {
+      "name": "herbstluftwm",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/herbstluftwm"
+    },
+    {
+      "name": "hicolor-icon-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/hicolor-icon-theme"
+    },
+    {
+      "name": "hugin",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/hugin"
+    },
+    {
+      "name": "i3",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/i3"
+    },
+    {
+      "name": "i3status",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/i3status"
+    },
+    {
+      "name": "ibus-libpinyin",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/ibus-libpinyin"
+    },
+    {
+      "name": "ibus",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/ibus"
+    },
+    {
+      "name": "icewm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/icewm"
+    },
+    {
+      "name": "incidenceeditor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/incidenceeditor"
+    },
+    {
+      "name": "inkscape",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/inkscape"
+    },
+    {
+      "name": "iso-codes",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/iso-codes"
+    },
+    {
+      "name": "itinerary",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/itinerary"
+    },
+    {
+      "name": "jwm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/jwm"
+    },
+    {
+      "name": "kaccounts-integration",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kaccounts-integration"
+    },
+    {
+      "name": "kactivitymanagerd",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kactivitymanagerd"
+    },
+    {
+      "name": "kaddressbook",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kaddressbook"
+    },
+    {
+      "name": "kalarm",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kalarm"
+    },
+    {
+      "name": "kalgebra",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kalgebra"
+    },
+    {
+      "name": "kalzium",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kalzium"
+    },
+    {
+      "name": "kanagram",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kanagram"
+    },
+    {
+      "name": "kate",
+      "type": "ide",
+      "build_system": "cmake",
+      "binary": "bin/kate"
+    },
+    {
+      "name": "kbruch",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kbruch"
+    },
+    {
+      "name": "kcalc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kcalc"
+    },
+    {
+      "name": "kcalutils",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kcalutils"
+    },
+    {
+      "name": "kcolorchooser",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kcolorchooser"
+    },
+    {
+      "name": "kcolorpicker",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kcolorpicker"
+    },
+    {
+      "name": "kdbg",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kdbg"
+    },
+    {
+      "name": "kddockwidgets",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kddockwidgets"
+    },
+    {
+      "name": "kde-applications",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kde-applications"
+    },
+    {
+      "name": "kde-cli-tools",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kde-cli-tools"
+    },
+    {
+      "name": "kde-gtk-config",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/kde-gtk-config"
+    },
+    {
+      "name": "kdeconnect",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdeconnect"
+    },
+    {
+      "name": "kdecoration",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdecoration"
+    },
+    {
+      "name": "kdeedu-data",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdeedu-data"
+    },
+    {
+      "name": "kdegraphics-mobipocket",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdegraphics-mobipocket"
+    },
+    {
+      "name": "kdegraphics-thumbnailers",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdegraphics-thumbnailers"
+    },
+    {
+      "name": "kdenlive",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdenlive"
+    },
+    {
+      "name": "kdepim-addons",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdepim-addons"
+    },
+    {
+      "name": "kdepim-runtime",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdepim-runtime"
+    },
+    {
+      "name": "kdeplasma-addons",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kdeplasma-addons"
+    },
+    {
+      "name": "kdiagram",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kdiagram"
+    },
+    {
+      "name": "kdialog",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kdialog"
+    },
+    {
+      "name": "kdsingleapplication",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kdsingleapplication"
+    },
+    {
+      "name": "keditbookmarks",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/keditbookmarks"
+    },
+    {
+      "name": "keepassxc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/keepassxc"
+    },
+    {
+      "name": "kermit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kermit"
+    },
+    {
+      "name": "keybinder",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/keybinder"
+    },
+    {
+      "name": "kf6-attica",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-attica"
+    },
+    {
+      "name": "kf6-baloo",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-baloo"
+    },
+    {
+      "name": "kf6-breeze-icons",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kf6-breeze-icons"
+    },
+    {
+      "name": "kf6-frameworkintegration",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-frameworkintegration"
+    },
+    {
+      "name": "kf6-karchive",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-karchive"
+    },
+    {
+      "name": "kf6-kauth",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kauth"
+    },
+    {
+      "name": "kf6-kbookmarks",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kbookmarks"
+    },
+    {
+      "name": "kf6-kcalendarcore",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcalendarcore"
+    },
+    {
+      "name": "kf6-kcmutils",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcmutils"
+    },
+    {
+      "name": "kf6-kcodecs",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcodecs"
+    },
+    {
+      "name": "kf6-kcolorscheme",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcolorscheme"
+    },
+    {
+      "name": "kf6-kcompletion",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcompletion"
+    },
+    {
+      "name": "kf6-kconfig",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kconfig"
+    },
+    {
+      "name": "kf6-kconfigwidgets",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kconfigwidgets"
+    },
+    {
+      "name": "kf6-kcontacts",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcontacts"
+    },
+    {
+      "name": "kf6-kcoreaddons",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcoreaddons"
+    },
+    {
+      "name": "kf6-kcrash",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kcrash"
+    },
+    {
+      "name": "kf6-kdav",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kdav"
+    },
+    {
+      "name": "kf6-kdbusaddons",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kdbusaddons"
+    },
+    {
+      "name": "kf6-kdeclarative",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kdeclarative"
+    },
+    {
+      "name": "kf6-kded",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kded"
+    },
+    {
+      "name": "kf6-kdnssd",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kdnssd"
+    },
+    {
+      "name": "kf6-kdoctools",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kdoctools"
+    },
+    {
+      "name": "kf6-kfilemetadata",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kfilemetadata"
+    },
+    {
+      "name": "kf6-kglobalaccel",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kglobalaccel"
+    },
+    {
+      "name": "kf6-kguiaddons",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kguiaddons"
+    },
+    {
+      "name": "kf6-kholidays",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kholidays"
+    },
+    {
+      "name": "kf6-ki18n",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-ki18n"
+    },
+    {
+      "name": "kf6-kiconthemes",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kiconthemes"
+    },
+    {
+      "name": "kf6-kidletime",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kidletime"
+    },
+    {
+      "name": "kf6-kimageformats",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kimageformats"
+    },
+    {
+      "name": "kf6-kio",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kio"
+    },
+    {
+      "name": "kf6-kirigami",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kirigami"
+    },
+    {
+      "name": "kf6-kitemmodels",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kitemmodels"
+    },
+    {
+      "name": "kf6-kitemviews",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kitemviews"
+    },
+    {
+      "name": "kf6-kjobwidgets",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kjobwidgets"
+    },
+    {
+      "name": "kf6-kmime",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kmime"
+    },
+    {
+      "name": "kf6-knewstuff",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/kf6-knewstuff"
+    },
+    {
+      "name": "kf6-knotifications",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-knotifications"
+    },
+    {
+      "name": "kf6-knotifyconfig",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-knotifyconfig"
+    },
+    {
+      "name": "kf6-kpackage",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kpackage"
+    },
+    {
+      "name": "kf6-kparts",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kparts"
+    },
+    {
+      "name": "kf6-kpeople",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kpeople"
+    },
+    {
+      "name": "kf6-kplotting",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kplotting"
+    },
+    {
+      "name": "kf6-kpty",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kpty"
+    },
+    {
+      "name": "kf6-kquickcharts",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kquickcharts"
+    },
+    {
+      "name": "kf6-krunner",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-krunner"
+    },
+    {
+      "name": "kf6-kservice",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kservice"
+    },
+    {
+      "name": "kf6-kstatusnotifieritem",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kstatusnotifieritem"
+    },
+    {
+      "name": "kf6-ksvg",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-ksvg"
+    },
+    {
+      "name": "kf6-ktexteditor",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-ktexteditor"
+    },
+    {
+      "name": "kf6-ktexttemplate",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-ktexttemplate"
+    },
+    {
+      "name": "kf6-ktextwidgets",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-ktextwidgets"
+    },
+    {
+      "name": "kf6-kunitconversion",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kunitconversion"
+    },
+    {
+      "name": "kf6-kuserfeedback",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kuserfeedback"
+    },
+    {
+      "name": "kf6-kwallet",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kwallet"
+    },
+    {
+      "name": "kf6-kwidgetsaddons",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kwidgetsaddons"
+    },
+    {
+      "name": "kf6-kwindowsystem",
+      "type": "wm",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kwindowsystem"
+    },
+    {
+      "name": "kf6-kxmlgui",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-kxmlgui"
+    },
+    {
+      "name": "kf6-oxygen-icons",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-oxygen-icons"
+    },
+    {
+      "name": "kf6-prison",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-prison"
+    },
+    {
+      "name": "kf6-purpose",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-purpose"
+    },
+    {
+      "name": "kf6-qqc2-desktop-style",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/kf6-qqc2-desktop-style"
+    },
+    {
+      "name": "kf6-solid",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kf6-solid"
+    },
+    {
+      "name": "kf6-sonnet",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-sonnet"
+    },
+    {
+      "name": "kf6-syndication",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-syndication"
+    },
+    {
+      "name": "kf6-syntax-highlighting",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-syntax-highlighting"
+    },
+    {
+      "name": "kf6-threadweaver",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kf6-threadweaver"
+    },
+    {
+      "name": "kfind",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kfind"
+    },
+    {
+      "name": "kgeography",
+      "type": "media",
+      "build_system": "meson",
+      "binary": "bin/kgeography"
+    },
+    {
+      "name": "kget",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kget"
+    },
+    {
+      "name": "kglobalacceld",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kglobalacceld"
+    },
+    {
+      "name": "kgraphviewer",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kgraphviewer"
+    },
+    {
+      "name": "khangman",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/khangman"
+    },
+    {
+      "name": "khealthcertificate",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/khealthcertificate"
+    },
+    {
+      "name": "kid3",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kid3"
+    },
+    {
+      "name": "kidentitymanagement",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kidentitymanagement"
+    },
+    {
+      "name": "kig",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kig"
+    },
+    {
+      "name": "kigo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kigo"
+    },
+    {
+      "name": "kimageannotator",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kimageannotator"
+    },
+    {
+      "name": "kimagemapeditor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kimagemapeditor"
+    },
+    {
+      "name": "kimap",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kimap"
+    },
+    {
+      "name": "kinfocenter",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kinfocenter"
+    },
+    {
+      "name": "kio-extras",
+      "type": "library",
+      "build_system": "cmake",
+      "binary": "bin/kio-extras"
+    },
+    {
+      "name": "kirigami-addons",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kirigami-addons"
+    },
+    {
+      "name": "kiriki",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kiriki"
+    },
+    {
+      "name": "kiten",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kiten"
+    },
+    {
+      "name": "kitinerary",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kitinerary"
+    },
+    {
+      "name": "kitty",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/kitty"
+    },
+    {
+      "name": "kldap",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kldap"
+    },
+    {
+      "name": "kleopatra",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kleopatra"
+    },
+    {
+      "name": "klettres",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/klettres"
+    },
+    {
+      "name": "kmag",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmag"
+    },
+    {
+      "name": "kmahjongg",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmahjongg"
+    },
+    {
+      "name": "kmail-account-wizard",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kmail-account-wizard"
+    },
+    {
+      "name": "kmail",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kmail"
+    },
+    {
+      "name": "kmailtransport",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/kmailtransport"
+    },
+    {
+      "name": "kmbox",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmbox"
+    },
+    {
+      "name": "kmenuedit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmenuedit"
+    },
+    {
+      "name": "kmines",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmines"
+    },
+    {
+      "name": "kmousetool",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmousetool"
+    },
+    {
+      "name": "kmouth",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmouth"
+    },
+    {
+      "name": "kmplot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kmplot"
+    },
+    {
+      "name": "knights",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/knights"
+    },
+    {
+      "name": "knighttime",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/knighttime"
+    },
+    {
+      "name": "koko",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/koko"
+    },
+    {
+      "name": "kolourpaint",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kolourpaint"
+    },
+    {
+      "name": "komorebi",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/komorebi"
+    },
+    {
+      "name": "konqueror",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/konqueror"
+    },
+    {
+      "name": "konsole",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/konsole"
+    },
+    {
+      "name": "kontact",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kontact"
+    },
+    {
+      "name": "kontactinterface",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kontactinterface"
+    },
+    {
+      "name": "kontrast",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/kontrast"
+    },
+    {
+      "name": "konversation",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/konversation"
+    },
+    {
+      "name": "kopeninghours",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kopeninghours"
+    },
+    {
+      "name": "korganizer",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/korganizer"
+    },
+    {
+      "name": "kosmindoormap",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kosmindoormap"
+    },
+    {
+      "name": "kpat",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kpat"
+    },
+    {
+      "name": "kpimtextedit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kpimtextedit"
+    },
+    {
+      "name": "kpipewire",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kpipewire"
+    },
+    {
+      "name": "kpkpass",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kpkpass"
+    },
+    {
+      "name": "kpublictransport",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kpublictransport"
+    },
+    {
+      "name": "kqtquickcharts",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/kqtquickcharts"
+    },
+    {
+      "name": "kquickimageeditor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kquickimageeditor"
+    },
+    {
+      "name": "krdc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/krdc"
+    },
+    {
+      "name": "krfb",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/krfb"
+    },
+    {
+      "name": "krita",
+      "type": "media",
+      "build_system": "cmake",
+      "binary": "bin/krita"
+    },
+    {
+      "name": "kruler",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kruler"
+    },
+    {
+      "name": "kscreen",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kscreen"
+    },
+    {
+      "name": "kseexpr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kseexpr"
+    },
+    {
+      "name": "ksmtp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ksmtp"
+    },
+    {
+      "name": "kstars",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/kstars"
+    },
+    {
+      "name": "ksystemstats",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/ksystemstats"
+    },
+    {
+      "name": "ktextaddons",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ktextaddons"
+    },
+    {
+      "name": "ktnef",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ktnef"
+    },
+    {
+      "name": "ktorrent",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ktorrent"
+    },
+    {
+      "name": "ktouch",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ktouch"
+    },
+    {
+      "name": "kturtle",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kturtle"
+    },
+    {
+      "name": "kunifiedpush",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kunifiedpush"
+    },
+    {
+      "name": "kvantum",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kvantum"
+    },
+    {
+      "name": "kwalletmanager",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kwalletmanager"
+    },
+    {
+      "name": "kwave",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kwave"
+    },
+    {
+      "name": "kwayland",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kwayland"
+    },
+    {
+      "name": "kweather",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kweather"
+    },
+    {
+      "name": "kweathercore",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kweathercore"
+    },
+    {
+      "name": "kwin-x11",
+      "type": "wm",
+      "build_system": "cmake",
+      "binary": "bin/kwin-x11"
+    },
+    {
+      "name": "kwordquiz",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/kwordquiz"
+    },
+    {
+      "name": "l3afpad",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/l3afpad"
+    },
+    {
+      "name": "labwc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/labwc"
+    },
+    {
+      "name": "layer-shell-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/layer-shell-qt"
+    },
+    {
+      "name": "lenmus",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lenmus"
+    },
+    {
+      "name": "leocad",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/leocad"
+    },
+    {
+      "name": "libaccounts-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libaccounts-qt"
+    },
+    {
+      "name": "libadapta",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libadapta"
+    },
+    {
+      "name": "libadwaita",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/libadwaita"
+    },
+    {
+      "name": "libatkmm-1.6",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/libatkmm-1.6"
+    },
+    {
+      "name": "libayatana-appindicator",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libayatana-appindicator"
+    },
+    {
+      "name": "libayatana-indicator",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libayatana-indicator"
+    },
+    {
+      "name": "libcanberra",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libcanberra"
+    },
+    {
+      "name": "libcolord",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libcolord"
+    },
+    {
+      "name": "libdbusmenu-lxqt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libdbusmenu-lxqt"
+    },
+    {
+      "name": "libdbusmenu",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libdbusmenu"
+    },
+    {
+      "name": "libdecor",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libdecor"
+    },
+    {
+      "name": "libei",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libei"
+    },
+    {
+      "name": "libevdev",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libevdev"
+    },
+    {
+      "name": "libfakekey",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libfakekey"
+    },
+    {
+      "name": "libfcft",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libfcft"
+    },
+    {
+      "name": "libfm-extra",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libfm-extra"
+    },
+    {
+      "name": "libfm-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libfm-qt"
+    },
+    {
+      "name": "libfm",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libfm"
+    },
+    {
+      "name": "libfontenc",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libfontenc"
+    },
+    {
+      "name": "libgedit-amtk",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/libgedit-amtk"
+    },
+    {
+      "name": "libgedit-gtksourceview",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/libgedit-gtksourceview"
+    },
+    {
+      "name": "libgedit-tepl",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/libgedit-tepl"
+    },
+    {
+      "name": "libgepub",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libgepub"
+    },
+    {
+      "name": "libgnomekbd",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/libgnomekbd"
+    },
+    {
+      "name": "libgravatar",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libgravatar"
+    },
+    {
+      "name": "libgweather",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libgweather"
+    },
+    {
+      "name": "libhandy",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libhandy"
+    },
+    {
+      "name": "libime",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libime"
+    },
+    {
+      "name": "libkdcraw",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkdcraw"
+    },
+    {
+      "name": "libkdegames",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/libkdegames"
+    },
+    {
+      "name": "libkdepim",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/libkdepim"
+    },
+    {
+      "name": "libkeduvocdocument",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkeduvocdocument"
+    },
+    {
+      "name": "libkexiv2",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkexiv2"
+    },
+    {
+      "name": "libkgapi",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkgapi"
+    },
+    {
+      "name": "libkleo",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkleo"
+    },
+    {
+      "name": "libkmahjongg",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkmahjongg"
+    },
+    {
+      "name": "libkscreen",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libkscreen"
+    },
+    {
+      "name": "libksieve",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libksieve"
+    },
+    {
+      "name": "libksysguard",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libksysguard"
+    },
+    {
+      "name": "libktorrent",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libktorrent"
+    },
+    {
+      "name": "liblxqt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/liblxqt"
+    },
+    {
+      "name": "libmatekbd",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libmatekbd"
+    },
+    {
+      "name": "libmatemixer",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libmatemixer"
+    },
+    {
+      "name": "libmateweather",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libmateweather"
+    },
+    {
+      "name": "libncnn",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libncnn"
+    },
+    {
+      "name": "libneatvnc",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libneatvnc"
+    },
+    {
+      "name": "libnotify",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libnotify"
+    },
+    {
+      "name": "libpciaccess",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libpciaccess"
+    },
+    {
+      "name": "libpeas",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libpeas"
+    },
+    {
+      "name": "libplasma",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/libplasma"
+    },
+    {
+      "name": "libportal",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libportal"
+    },
+    {
+      "name": "libproxy",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libproxy"
+    },
+    {
+      "name": "libqaccessibilityclient-qt6",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libqaccessibilityclient-qt6"
+    },
+    {
+      "name": "libqtxdg",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libqtxdg"
+    },
+    {
+      "name": "libquotient",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libquotient"
+    },
+    {
+      "name": "libreoffice",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libreoffice"
+    },
+    {
+      "name": "libresprite",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libresprite"
+    },
+    {
+      "name": "librewolf",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/librewolf"
+    },
+    {
+      "name": "libsimdutf",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libsimdutf"
+    },
+    {
+      "name": "libspelling",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libspelling"
+    },
+    {
+      "name": "libsysstat",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/libsysstat"
+    },
+    {
+      "name": "libva",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libva"
+    },
+    {
+      "name": "libvncserver",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libvncserver"
+    },
+    {
+      "name": "libvte",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libvte"
+    },
+    {
+      "name": "libwnck",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libwnck"
+    },
+    {
+      "name": "libxaw",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxaw"
+    },
+    {
+      "name": "libxcomposite",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxcomposite"
+    },
+    {
+      "name": "libxcvt",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxcvt"
+    },
+    {
+      "name": "libxdamage",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxdamage"
+    },
+    {
+      "name": "libxfce4ui",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libxfce4ui"
+    },
+    {
+      "name": "libxfce4util",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libxfce4util"
+    },
+    {
+      "name": "libxfce4windowing",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/libxfce4windowing"
+    },
+    {
+      "name": "libxfont2",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxfont2"
+    },
+    {
+      "name": "libxinerama",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxinerama"
+    },
+    {
+      "name": "libxkbcommon",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxkbcommon"
+    },
+    {
+      "name": "libxkbfile",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxkbfile"
+    },
+    {
+      "name": "libxklavier",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxklavier"
+    },
+    {
+      "name": "libxml++-2.6",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxml++-2.6"
+    },
+    {
+      "name": "libxml++-5.0",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxml++-5.0"
+    },
+    {
+      "name": "libxmu",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxmu"
+    },
+    {
+      "name": "libxpm",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxpm"
+    },
+    {
+      "name": "libxpresent",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxpresent"
+    },
+    {
+      "name": "libxres",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxres"
+    },
+    {
+      "name": "libxxf86dga",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/libxxf86dga"
+    },
+    {
+      "name": "lincity-ng",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lincity-ng"
+    },
+    {
+      "name": "lite-xl",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lite-xl"
+    },
+    {
+      "name": "loqui",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/loqui"
+    },
+    {
+      "name": "love",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/love"
+    },
+    {
+      "name": "lskat",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lskat"
+    },
+    {
+      "name": "luanti",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/luanti"
+    },
+    {
+      "name": "lugaru",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lugaru"
+    },
+    {
+      "name": "lxappearance",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lxappearance"
+    },
+    {
+      "name": "lxde-icon-theme",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxde-icon-theme"
+    },
+    {
+      "name": "lximage-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lximage-qt"
+    },
+    {
+      "name": "lxmenu-data",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lxmenu-data"
+    },
+    {
+      "name": "lxqt-about",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-about"
+    },
+    {
+      "name": "lxqt-archiver",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-archiver"
+    },
+    {
+      "name": "lxqt-build-tools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-build-tools"
+    },
+    {
+      "name": "lxqt-config",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-config"
+    },
+    {
+      "name": "lxqt-globalkeys",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-globalkeys"
+    },
+    {
+      "name": "lxqt-menu-data",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-menu-data"
+    },
+    {
+      "name": "lxqt-notificationd",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-notificationd"
+    },
+    {
+      "name": "lxqt-openssh-askpass",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-openssh-askpass"
+    },
+    {
+      "name": "lxqt-panel",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-panel"
+    },
+    {
+      "name": "lxqt-powermanagement",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-powermanagement"
+    },
+    {
+      "name": "lxqt-qtplugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-qtplugin"
+    },
+    {
+      "name": "lxqt-runner",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-runner"
+    },
+    {
+      "name": "lxqt-session",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-session"
+    },
+    {
+      "name": "lxqt-themes",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-themes"
+    },
+    {
+      "name": "lxqt-wayland-session",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt-wayland-session"
+    },
+    {
+      "name": "lxqt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/lxqt"
+    },
+    {
+      "name": "lxrandr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lxrandr"
+    },
+    {
+      "name": "lxtask",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lxtask"
+    },
+    {
+      "name": "lxterminal",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/lxterminal"
+    },
+    {
+      "name": "lyx",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/lyx"
+    },
+    {
+      "name": "mailcommon",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mailcommon"
+    },
+    {
+      "name": "mailimporter",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mailimporter"
+    },
+    {
+      "name": "mame",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mame"
+    },
+    {
+      "name": "mangohud",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mangohud"
+    },
+    {
+      "name": "marble",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/marble"
+    },
+    {
+      "name": "marco",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/marco"
+    },
+    {
+      "name": "marknote",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/marknote"
+    },
+    {
+      "name": "matchbox-keyboard",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/matchbox-keyboard"
+    },
+    {
+      "name": "mate-applet-brisk-menu",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-applet-brisk-menu"
+    },
+    {
+      "name": "mate-applets",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-applets"
+    },
+    {
+      "name": "mate-backgrounds",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-backgrounds"
+    },
+    {
+      "name": "mate-calc",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-calc"
+    },
+    {
+      "name": "mate-common",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-common"
+    },
+    {
+      "name": "mate-control-center",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-control-center"
+    },
+    {
+      "name": "mate-desktop",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-desktop"
+    },
+    {
+      "name": "mate-extra",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-extra"
+    },
+    {
+      "name": "mate-icon-theme-faenza",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-icon-theme-faenza"
+    },
+    {
+      "name": "mate-icon-theme",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-icon-theme"
+    },
+    {
+      "name": "mate-media",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-media"
+    },
+    {
+      "name": "mate-menus",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-menus"
+    },
+    {
+      "name": "mate-netbook",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-netbook"
+    },
+    {
+      "name": "mate-notification-daemon",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-notification-daemon"
+    },
+    {
+      "name": "mate-panel",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-panel"
+    },
+    {
+      "name": "mate-power-manager",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-power-manager"
+    },
+    {
+      "name": "mate-screensaver",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-screensaver"
+    },
+    {
+      "name": "mate-session-manager",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-session-manager"
+    },
+    {
+      "name": "mate-settings-daemon",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-settings-daemon"
+    },
+    {
+      "name": "mate-system-monitor",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/mate-system-monitor"
+    },
+    {
+      "name": "mate-terminal",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/mate-terminal"
+    },
+    {
+      "name": "mate-themes",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-themes"
+    },
+    {
+      "name": "mate-tweak",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-tweak"
+    },
+    {
+      "name": "mate-utils",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate-utils"
+    },
+    {
+      "name": "mate",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mate"
+    },
+    {
+      "name": "mbox-importer",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mbox-importer"
+    },
+    {
+      "name": "meld",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/meld"
+    },
+    {
+      "name": "melonds",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/melonds"
+    },
+    {
+      "name": "menu-cache",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/menu-cache"
+    },
+    {
+      "name": "merkuro",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/merkuro"
+    },
+    {
+      "name": "mesa-demos",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mesa-demos"
+    },
+    {
+      "name": "messagelib",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/messagelib"
+    },
+    {
+      "name": "mgba",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mgba"
+    },
+    {
+      "name": "milkytracker",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/milkytracker"
+    },
+    {
+      "name": "milou",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/milou"
+    },
+    {
+      "name": "mimetreeparser",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mimetreeparser"
+    },
+    {
+      "name": "mindforger",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mindforger"
+    },
+    {
+      "name": "mint-themes",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mint-themes"
+    },
+    {
+      "name": "mint-x-icon-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mint-x-icon-theme"
+    },
+    {
+      "name": "mint-y-icon-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mint-y-icon-theme"
+    },
+    {
+      "name": "minuet",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/minuet"
+    },
+    {
+      "name": "mixxx",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mixxx"
+    },
+    {
+      "name": "mkvtoolnix",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mkvtoolnix"
+    },
+    {
+      "name": "mlt",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mlt"
+    },
+    {
+      "name": "mogan",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mogan"
+    },
+    {
+      "name": "morphosis",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/morphosis"
+    },
+    {
+      "name": "motif",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/motif"
+    },
+    {
+      "name": "mousepad",
+      "type": "ide",
+      "build_system": "autotools",
+      "binary": "bin/mousepad"
+    },
+    {
+      "name": "movit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/movit"
+    },
+    {
+      "name": "mozo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mozo"
+    },
+    {
+      "name": "mpc-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/mpc-qt"
+    },
+    {
+      "name": "mpv-x",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/mpv-x"
+    },
+    {
+      "name": "mtdev",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mtdev"
+    },
+    {
+      "name": "mtpaint",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mtpaint"
+    },
+    {
+      "name": "muffin",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/muffin"
+    },
+    {
+      "name": "mumble-server",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/mumble-server"
+    },
+    {
+      "name": "musescore",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/musescore"
+    },
+    {
+      "name": "ncspot-mpris",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ncspot-mpris"
+    },
+    {
+      "name": "nemo",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/nemo"
+    },
+    {
+      "name": "neochat",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/neochat"
+    },
+    {
+      "name": "netsurf",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/netsurf"
+    },
+    {
+      "name": "nextcloud-client",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/nextcloud-client"
+    },
+    {
+      "name": "nxengine",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/nxengine"
+    },
+    {
+      "name": "obconf-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/obconf-qt"
+    },
+    {
+      "name": "ocean-sound-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ocean-sound-theme"
+    },
+    {
+      "name": "octave-x",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/octave-x"
+    },
+    {
+      "name": "okular",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/okular"
+    },
+    {
+      "name": "oneko-sakura",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/oneko-sakura"
+    },
+    {
+      "name": "openbox",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/openbox"
+    },
+    {
+      "name": "opencsg",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/opencsg"
+    },
+    {
+      "name": "opencv",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/opencv"
+    },
+    {
+      "name": "openimageio",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/openimageio"
+    },
+    {
+      "name": "openscad-x",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/openscad-x"
+    },
+    {
+      "name": "opensubdiv",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/opensubdiv"
+    },
+    {
+      "name": "openttd-gfx",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/openttd-gfx"
+    },
+    {
+      "name": "openttd-msx",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/openttd-msx"
+    },
+    {
+      "name": "openttd-sfx",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/openttd-sfx"
+    },
+    {
+      "name": "openttd",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/openttd"
+    },
+    {
+      "name": "openvdb",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/openvdb"
+    },
+    {
+      "name": "orca",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/orca"
+    },
+    {
+      "name": "oshu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/oshu"
+    },
+    {
+      "name": "oxygen-sounds",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/oxygen-sounds"
+    },
+    {
+      "name": "oxygen",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/oxygen"
+    },
+    {
+      "name": "palapeli",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/palapeli"
+    },
+    {
+      "name": "papirus-icon-theme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/papirus-icon-theme"
+    },
+    {
+      "name": "pardus-pen",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pardus-pen"
+    },
+    {
+      "name": "parley",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/parley"
+    },
+    {
+      "name": "parole",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/parole"
+    },
+    {
+      "name": "pavucontrol-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/pavucontrol-qt"
+    },
+    {
+      "name": "pavucontrol",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pavucontrol"
+    },
+    {
+      "name": "pcmanfm-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/pcmanfm-qt"
+    },
+    {
+      "name": "pcmanfm",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/pcmanfm"
+    },
+    {
+      "name": "pcsx-rearmed",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pcsx-rearmed"
+    },
+    {
+      "name": "phonon-qt6-vlc",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/phonon-qt6-vlc"
+    },
+    {
+      "name": "phonon-qt6",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/phonon-qt6"
+    },
+    {
+      "name": "picom",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/picom"
+    },
+    {
+      "name": "pidgin",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pidgin"
+    },
+    {
+      "name": "pim-data-exporter",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pim-data-exporter"
+    },
+    {
+      "name": "pim-sieve-editor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pim-sieve-editor"
+    },
+    {
+      "name": "pimcommon",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pimcommon"
+    },
+    {
+      "name": "pinentry-gnome3",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/pinentry-gnome3"
+    },
+    {
+      "name": "plank-reloaded",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/plank-reloaded"
+    },
+    {
+      "name": "plasma-activities-stats",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/plasma-activities-stats"
+    },
+    {
+      "name": "plasma-activities",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-activities"
+    },
+    {
+      "name": "plasma-browser-integration",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-browser-integration"
+    },
+    {
+      "name": "plasma-desktop",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-desktop"
+    },
+    {
+      "name": "plasma-integration",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-integration"
+    },
+    {
+      "name": "plasma-nm",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-nm"
+    },
+    {
+      "name": "plasma-pa",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-pa"
+    },
+    {
+      "name": "plasma-sdk",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-sdk"
+    },
+    {
+      "name": "plasma-systemmonitor",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/plasma-systemmonitor"
+    },
+    {
+      "name": "plasma-wayland-protocols",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-wayland-protocols"
+    },
+    {
+      "name": "plasma-welcome",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-welcome"
+    },
+    {
+      "name": "plasma-workspace-wallpapers",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-workspace-wallpapers"
+    },
+    {
+      "name": "plasma-workspace",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma-workspace"
+    },
+    {
+      "name": "plasma",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma"
+    },
+    {
+      "name": "plasma5support",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/plasma5support"
+    },
+    {
+      "name": "plotutils",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/plotutils"
+    },
+    {
+      "name": "pluma",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pluma"
+    },
+    {
+      "name": "polybar",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/polybar"
+    },
+    {
+      "name": "polyphone",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/polyphone"
+    },
+    {
+      "name": "pong2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pong2"
+    },
+    {
+      "name": "poppler-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/poppler-qt"
+    },
+    {
+      "name": "powerdevil",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/powerdevil"
+    },
+    {
+      "name": "praat",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/praat"
+    },
+    {
+      "name": "print-manager",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/print-manager"
+    },
+    {
+      "name": "pulseaudio-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/pulseaudio-qt"
+    },
+    {
+      "name": "putty",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/putty"
+    },
+    {
+      "name": "pwsafe",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pwsafe"
+    },
+    {
+      "name": "pyatspi",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/pyatspi"
+    },
+    {
+      "name": "pyqt5",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/pyqt5"
+    },
+    {
+      "name": "python-opencv-python",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/python-opencv-python"
+    },
+    {
+      "name": "python-pyqtwebengine",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/python-pyqtwebengine"
+    },
+    {
+      "name": "python-qscintilla",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/python-qscintilla"
+    },
+    {
+      "name": "python-xapp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/python-xapp"
+    },
+    {
+      "name": "python-xvfbwrapper",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/python-xvfbwrapper"
+    },
+    {
+      "name": "qalculate-gtk",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/qalculate-gtk"
+    },
+    {
+      "name": "qb64",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qb64"
+    },
+    {
+      "name": "qbittorrent",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qbittorrent"
+    },
+    {
+      "name": "qca",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qca"
+    },
+    {
+      "name": "qcoro",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qcoro"
+    },
+    {
+      "name": "qcustomplot",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/qcustomplot"
+    },
+    {
+      "name": "qemu-system-x86-64",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/qemu-system-x86-64"
+    },
+    {
+      "name": "qgit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qgit"
+    },
+    {
+      "name": "qgpgme",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qgpgme"
+    },
+    {
+      "name": "qqc2-breeze-style",
+      "type": "terminal",
+      "build_system": "cmake",
+      "binary": "bin/qqc2-breeze-style"
+    },
+    {
+      "name": "qscintilla-qt6",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qscintilla-qt6"
+    },
+    {
+      "name": "qscintilla",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/qscintilla"
+    },
+    {
+      "name": "qt-creator",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt-creator"
+    },
+    {
+      "name": "qt5-qtbase",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtbase"
+    },
+    {
+      "name": "qt5-qtdeclarative",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtdeclarative"
+    },
+    {
+      "name": "qt5-qtlocation",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtlocation"
+    },
+    {
+      "name": "qt5-qtmultimedia",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtmultimedia"
+    },
+    {
+      "name": "qt5-qtscript",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtscript"
+    },
+    {
+      "name": "qt5-qtsensors",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtsensors"
+    },
+    {
+      "name": "qt5-qtserialport",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtserialport"
+    },
+    {
+      "name": "qt5-qtsvg",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtsvg"
+    },
+    {
+      "name": "qt5-qttools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qttools"
+    },
+    {
+      "name": "qt5-qtwebchannel",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtwebchannel"
+    },
+    {
+      "name": "qt5-qtwebengine",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtwebengine"
+    },
+    {
+      "name": "qt5-qtwebsockets",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtwebsockets"
+    },
+    {
+      "name": "qt5-qtx11extras",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtx11extras"
+    },
+    {
+      "name": "qt5-qtxmlpatterns",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5-qtxmlpatterns"
+    },
+    {
+      "name": "qt5ct",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt5ct"
+    },
+    {
+      "name": "qt6-qt5compat",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qt5compat"
+    },
+    {
+      "name": "qt6-qtbase",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtbase"
+    },
+    {
+      "name": "qt6-qtcharts",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtcharts"
+    },
+    {
+      "name": "qt6-qtconnectivity",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtconnectivity"
+    },
+    {
+      "name": "qt6-qtdeclarative",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtdeclarative"
+    },
+    {
+      "name": "qt6-qthttpserver",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qthttpserver"
+    },
+    {
+      "name": "qt6-qtimageformats",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtimageformats"
+    },
+    {
+      "name": "qt6-qtlanguageserver",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtlanguageserver"
+    },
+    {
+      "name": "qt6-qtlocation",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtlocation"
+    },
+    {
+      "name": "qt6-qtmultimedia",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtmultimedia"
+    },
+    {
+      "name": "qt6-qtnetworkauth",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtnetworkauth"
+    },
+    {
+      "name": "qt6-qtpositioning",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtpositioning"
+    },
+    {
+      "name": "qt6-qtscxml",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtscxml"
+    },
+    {
+      "name": "qt6-qtsensors",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtsensors"
+    },
+    {
+      "name": "qt6-qtshadertools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtshadertools"
+    },
+    {
+      "name": "qt6-qtspeech",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtspeech"
+    },
+    {
+      "name": "qt6-qtsvg",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtsvg"
+    },
+    {
+      "name": "qt6-qttools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qttools"
+    },
+    {
+      "name": "qt6-qttranslations",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qttranslations"
+    },
+    {
+      "name": "qt6-qtvirtualkeyboard",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtvirtualkeyboard"
+    },
+    {
+      "name": "qt6-qtwayland",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtwayland"
+    },
+    {
+      "name": "qt6-qtwebchannel",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtwebchannel"
+    },
+    {
+      "name": "qt6-qtwebengine",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtwebengine"
+    },
+    {
+      "name": "qt6-qtwebsockets",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtwebsockets"
+    },
+    {
+      "name": "qt6-qtwebview",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6-qtwebview"
+    },
+    {
+      "name": "qt6ct",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qt6ct"
+    },
+    {
+      "name": "qterminal",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qterminal"
+    },
+    {
+      "name": "qtermwidget",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qtermwidget"
+    },
+    {
+      "name": "qtkeychain",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qtkeychain"
+    },
+    {
+      "name": "qtutilities",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qtutilities"
+    },
+    {
+      "name": "qtxdg-tools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/qtxdg-tools"
+    },
+    {
+      "name": "quazip",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/quazip"
+    },
+    {
+      "name": "quickshell",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/quickshell"
+    },
+    {
+      "name": "rawtherapee",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/rawtherapee"
+    },
+    {
+      "name": "raylib",
+      "type": "library",
+      "build_system": "autotools",
+      "binary": "bin/raylib"
+    },
+    {
+      "name": "recastnavigation",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/recastnavigation"
+    },
+    {
+      "name": "recordmydesktop",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/recordmydesktop"
+    },
+    {
+      "name": "rhythmbox",
+      "type": "media",
+      "build_system": "meson",
+      "binary": "bin/rhythmbox"
+    },
+    {
+      "name": "ristretto",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/ristretto"
+    },
+    {
+      "name": "rnote",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/rnote"
+    },
+    {
+      "name": "rocs",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/rocs"
+    },
+    {
+      "name": "rofi",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/rofi"
+    },
+    {
+      "name": "roxterm",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/roxterm"
+    },
+    {
+      "name": "ruffle",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/ruffle"
+    },
+    {
+      "name": "schismtracker",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/schismtracker"
+    },
+    {
+      "name": "scite",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/scite"
+    },
+    {
+      "name": "scrcpy",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/scrcpy"
+    },
+    {
+      "name": "screengrab",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/screengrab"
+    },
+    {
+      "name": "scrot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/scrot"
+    },
+    {
+      "name": "sdl-image",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl-image"
+    },
+    {
+      "name": "sdl-mixer",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl-mixer"
+    },
+    {
+      "name": "sdl-net",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl-net"
+    },
+    {
+      "name": "sdl-ttf",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl-ttf"
+    },
+    {
+      "name": "sdl",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl"
+    },
+    {
+      "name": "sdl2-compat",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-compat"
+    },
+    {
+      "name": "sdl2-gfx",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-gfx"
+    },
+    {
+      "name": "sdl2-image",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-image"
+    },
+    {
+      "name": "sdl2-mixer",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-mixer"
+    },
+    {
+      "name": "sdl2-net",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-net"
+    },
+    {
+      "name": "sdl2-pango",
+      "type": "game",
+      "build_system": "meson",
+      "binary": "bin/sdl2-pango"
+    },
+    {
+      "name": "sdl2-ttf",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2-ttf"
+    },
+    {
+      "name": "sdl2",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl2"
+    },
+    {
+      "name": "sdl3-image",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl3-image"
+    },
+    {
+      "name": "sdl3-mixer",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl3-mixer"
+    },
+    {
+      "name": "sdl3-ttf",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl3-ttf"
+    },
+    {
+      "name": "sdl3",
+      "type": "game",
+      "build_system": "autotools",
+      "binary": "bin/sdl3"
+    },
+    {
+      "name": "sfml",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/sfml"
+    },
+    {
+      "name": "shared-mime-info",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/shared-mime-info"
+    },
+    {
+      "name": "shotcut",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/shotcut"
+    },
+    {
+      "name": "signon-kwallet-extension",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/signon-kwallet-extension"
+    },
+    {
+      "name": "signon-plugin-oauth2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/signon-plugin-oauth2"
+    },
+    {
+      "name": "signon-ui",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/signon-ui"
+    },
+    {
+      "name": "signond",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/signond"
+    },
+    {
+      "name": "simulide",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/simulide"
+    },
+    {
+      "name": "songrec",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/songrec"
+    },
+    {
+      "name": "spectacle",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/spectacle"
+    },
+    {
+      "name": "spek",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/spek"
+    },
+    {
+      "name": "spotify-qt",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/spotify-qt"
+    },
+    {
+      "name": "st",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/st"
+    },
+    {
+      "name": "startup-notification",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/startup-notification"
+    },
+    {
+      "name": "stellarsolver",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/stellarsolver"
+    },
+    {
+      "name": "step",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/step"
+    },
+    {
+      "name": "strawberry",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/strawberry"
+    },
+    {
+      "name": "surf",
+      "type": "browser",
+      "build_system": "autotools",
+      "binary": "bin/surf"
+    },
+    {
+      "name": "svgpart",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/svgpart"
+    },
+    {
+      "name": "sway",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/sway"
+    },
+    {
+      "name": "swaybg",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/swaybg"
+    },
+    {
+      "name": "sxhkd",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/sxhkd"
+    },
+    {
+      "name": "synaptic",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/synaptic"
+    },
+    {
+      "name": "systemsettings",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/systemsettings"
+    },
+    {
+      "name": "tabbed",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tabbed"
+    },
+    {
+      "name": "tageditor",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/tageditor"
+    },
+    {
+      "name": "tagparser",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tagparser"
+    },
+    {
+      "name": "telegram-desktop",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/telegram-desktop"
+    },
+    {
+      "name": "telepathy-glib",
+      "type": "library",
+      "build_system": "meson",
+      "binary": "bin/telepathy-glib"
+    },
+    {
+      "name": "tenacity",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tenacity"
+    },
+    {
+      "name": "termusic",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/termusic"
+    },
+    {
+      "name": "termux-x11-nightly",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/termux-x11-nightly"
+    },
+    {
+      "name": "texstudio",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/texstudio"
+    },
+    {
+      "name": "texworks",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/texworks"
+    },
+    {
+      "name": "the-powder-toy",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/the-powder-toy"
+    },
+    {
+      "name": "thonny",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/thonny"
+    },
+    {
+      "name": "thunar-archive-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/thunar-archive-plugin"
+    },
+    {
+      "name": "thunar",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/thunar"
+    },
+    {
+      "name": "thunderbird",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/thunderbird"
+    },
+    {
+      "name": "tigervnc-viewer",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tigervnc-viewer"
+    },
+    {
+      "name": "tigervnc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tigervnc"
+    },
+    {
+      "name": "tilda",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/tilda"
+    },
+    {
+      "name": "tilix",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/tilix"
+    },
+    {
+      "name": "tint2",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tint2"
+    },
+    {
+      "name": "tinyemu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tinyemu"
+    },
+    {
+      "name": "tokodon",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tokodon"
+    },
+    {
+      "name": "transmission-gtk",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/transmission-gtk"
+    },
+    {
+      "name": "trenchbroom",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/trenchbroom"
+    },
+    {
+      "name": "tumbler",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tumbler"
+    },
+    {
+      "name": "tuxpaint",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/tuxpaint"
+    },
+    {
+      "name": "uget",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/uget"
+    },
+    {
+      "name": "vala-panel-appmenu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/vala-panel-appmenu"
+    },
+    {
+      "name": "video-downloader",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/video-downloader"
+    },
+    {
+      "name": "vim-gtk",
+      "type": "ide",
+      "build_system": "meson",
+      "binary": "bin/vim-gtk"
+    },
+    {
+      "name": "vkmark",
+      "type": "generic",
+      "build_system": "cmake",
+      "binary": "bin/vkmark"
+    },
+    {
+      "name": "vlc-qt",
+      "type": "media",
+      "build_system": "autotools",
+      "binary": "bin/vlc-qt"
+    },
+    {
+      "name": "wayvnc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wayvnc"
+    },
+    {
+      "name": "webkit2gtk-4.1",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/webkit2gtk-4.1"
+    },
+    {
+      "name": "webkitgtk-6.0",
+      "type": "gui",
+      "build_system": "meson",
+      "binary": "bin/webkitgtk-6.0"
+    },
+    {
+      "name": "weston",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/weston"
+    },
+    {
+      "name": "wezterm-nightly",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wezterm-nightly"
+    },
+    {
+      "name": "wezterm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wezterm"
+    },
+    {
+      "name": "wine-stable",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/wine-stable"
+    },
+    {
+      "name": "wireshark-qt",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/wireshark-qt"
+    },
+    {
+      "name": "wlr-randr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wlr-randr"
+    },
+    {
+      "name": "wlroots",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wlroots"
+    },
+    {
+      "name": "wmaker",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wmaker"
+    },
+    {
+      "name": "wmctrl",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wmctrl"
+    },
+    {
+      "name": "wxmaxima",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wxmaxima"
+    },
+    {
+      "name": "wxwidgets",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/wxwidgets"
+    },
+    {
+      "name": "x11vnc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/x11vnc"
+    },
+    {
+      "name": "x2x",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/x2x"
+    },
+    {
+      "name": "xapp-symbolic-icons",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xapp-symbolic-icons"
+    },
+    {
+      "name": "xapp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xapp"
+    },
+    {
+      "name": "xarchiver",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xarchiver"
+    },
+    {
+      "name": "xbill",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xbill"
+    },
+    {
+      "name": "xbitmaps",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xbitmaps"
+    },
+    {
+      "name": "xboard",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xboard"
+    },
+    {
+      "name": "xcape",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcape"
+    },
+    {
+      "name": "xcb-imdkit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-imdkit"
+    },
+    {
+      "name": "xcb-util-cursor",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-cursor"
+    },
+    {
+      "name": "xcb-util-image",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-image"
+    },
+    {
+      "name": "xcb-util-keysyms",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-keysyms"
+    },
+    {
+      "name": "xcb-util-renderutil",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-renderutil"
+    },
+    {
+      "name": "xcb-util-wm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-wm"
+    },
+    {
+      "name": "xcb-util-xrm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util-xrm"
+    },
+    {
+      "name": "xcb-util",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcb-util"
+    },
+    {
+      "name": "xclip",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xclip"
+    },
+    {
+      "name": "xcompmgr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xcompmgr"
+    },
+    {
+      "name": "xdg-desktop-portal-kde",
+      "type": "gui",
+      "build_system": "cmake",
+      "binary": "bin/xdg-desktop-portal-kde"
+    },
+    {
+      "name": "xdg-desktop-portal",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xdg-desktop-portal"
+    },
+    {
+      "name": "xdg-menu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xdg-menu"
+    },
+    {
+      "name": "xdg-utils",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xdg-utils"
+    },
+    {
+      "name": "xdotool",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xdotool"
+    },
+    {
+      "name": "xeyes",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xeyes"
+    },
+    {
+      "name": "xf86-input-void",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xf86-input-void"
+    },
+    {
+      "name": "xf86-video-dummy",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xf86-video-dummy"
+    },
+    {
+      "name": "xfce4-appfinder",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-appfinder"
+    },
+    {
+      "name": "xfce4-battery-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-battery-plugin"
+    },
+    {
+      "name": "xfce4-calculator-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-calculator-plugin"
+    },
+    {
+      "name": "xfce4-clipman-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-clipman-plugin"
+    },
+    {
+      "name": "xfce4-cpugraph-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-cpugraph-plugin"
+    },
+    {
+      "name": "xfce4-datetime-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-datetime-plugin"
+    },
+    {
+      "name": "xfce4-dev-tools",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-dev-tools"
+    },
+    {
+      "name": "xfce4-dict",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-dict"
+    },
+    {
+      "name": "xfce4-docklike-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-docklike-plugin"
+    },
+    {
+      "name": "xfce4-eyes-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-eyes-plugin"
+    },
+    {
+      "name": "xfce4-genmon-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-genmon-plugin"
+    },
+    {
+      "name": "xfce4-goodies",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-goodies"
+    },
+    {
+      "name": "xfce4-mailwatch-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-mailwatch-plugin"
+    },
+    {
+      "name": "xfce4-netload-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-netload-plugin"
+    },
+    {
+      "name": "xfce4-notes-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-notes-plugin"
+    },
+    {
+      "name": "xfce4-notifyd",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-notifyd"
+    },
+    {
+      "name": "xfce4-panel-profiles",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-panel-profiles"
+    },
+    {
+      "name": "xfce4-panel",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-panel"
+    },
+    {
+      "name": "xfce4-places-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-places-plugin"
+    },
+    {
+      "name": "xfce4-power-manager",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-power-manager"
+    },
+    {
+      "name": "xfce4-pulseaudio-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-pulseaudio-plugin"
+    },
+    {
+      "name": "xfce4-screensaver",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-screensaver"
+    },
+    {
+      "name": "xfce4-screenshooter",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-screenshooter"
+    },
+    {
+      "name": "xfce4-session",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-session"
+    },
+    {
+      "name": "xfce4-settings",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-settings"
+    },
+    {
+      "name": "xfce4-taskmanager",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-taskmanager"
+    },
+    {
+      "name": "xfce4-terminal",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-terminal"
+    },
+    {
+      "name": "xfce4-timer-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-timer-plugin"
+    },
+    {
+      "name": "xfce4-wavelan-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-wavelan-plugin"
+    },
+    {
+      "name": "xfce4-whiskermenu-plugin",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4-whiskermenu-plugin"
+    },
+    {
+      "name": "xfce4",
+      "type": "gui",
+      "build_system": "autotools",
+      "binary": "bin/xfce4"
+    },
+    {
+      "name": "xfconf",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xfconf"
+    },
+    {
+      "name": "xfdesktop",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xfdesktop"
+    },
+    {
+      "name": "xfwm4",
+      "type": "wm",
+      "build_system": "autotools",
+      "binary": "bin/xfwm4"
+    },
+    {
+      "name": "xkeyboard-config",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xkeyboard-config"
+    },
+    {
+      "name": "xmoto",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xmoto"
+    },
+    {
+      "name": "xorg-font-util",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-font-util"
+    },
+    {
+      "name": "xorg-fonts-100dpi",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-100dpi"
+    },
+    {
+      "name": "xorg-fonts-75dpi",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-75dpi"
+    },
+    {
+      "name": "xorg-fonts-alias",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-alias"
+    },
+    {
+      "name": "xorg-fonts-cyrillic",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-cyrillic"
+    },
+    {
+      "name": "xorg-fonts-encodings",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-encodings"
+    },
+    {
+      "name": "xorg-fonts-misc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-fonts-misc"
+    },
+    {
+      "name": "xorg-iceauth",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-iceauth"
+    },
+    {
+      "name": "xorg-luit",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-luit"
+    },
+    {
+      "name": "xorg-mkfontscale",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-mkfontscale"
+    },
+    {
+      "name": "xorg-server",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-server"
+    },
+    {
+      "name": "xorg-setxkbmap",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-setxkbmap"
+    },
+    {
+      "name": "xorg-twm",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-twm"
+    },
+    {
+      "name": "xorg-xauth",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xauth"
+    },
+    {
+      "name": "xorg-xcalc",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xcalc"
+    },
+    {
+      "name": "xorg-xclock",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xclock"
+    },
+    {
+      "name": "xorg-xcursorgen",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xcursorgen"
+    },
+    {
+      "name": "xorg-xdpyinfo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xdpyinfo"
+    },
+    {
+      "name": "xorg-xev",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xev"
+    },
+    {
+      "name": "xorg-xhost",
+      "type": "terminal",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xhost"
+    },
+    {
+      "name": "xorg-xkbcomp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xkbcomp"
+    },
+    {
+      "name": "xorg-xlsfonts",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xlsfonts"
+    },
+    {
+      "name": "xorg-xmessage",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xmessage"
+    },
+    {
+      "name": "xorg-xprop",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xprop"
+    },
+    {
+      "name": "xorg-xrandr",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xrandr"
+    },
+    {
+      "name": "xorg-xrdb",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xrdb"
+    },
+    {
+      "name": "xorg-xsetroot",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xsetroot"
+    },
+    {
+      "name": "xorg-xwininfo",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xorg-xwininfo"
+    },
+    {
+      "name": "xournalpp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xournalpp"
+    },
+    {
+      "name": "xpdf",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xpdf"
+    },
+    {
+      "name": "xplanet",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xplanet"
+    },
+    {
+      "name": "xrdp",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xrdp"
+    },
+    {
+      "name": "xscreensaver",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xscreensaver"
+    },
+    {
+      "name": "xsel",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xsel"
+    },
+    {
+      "name": "xsettingsd",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xsettingsd"
+    },
+    {
+      "name": "xvkbd",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xvkbd"
+    },
+    {
+      "name": "xwallpaper",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xwallpaper"
+    },
+    {
+      "name": "xwayland",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/xwayland"
+    },
+    {
+      "name": "yacreader",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/yacreader"
+    },
+    {
+      "name": "yad",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/yad"
+    },
+    {
+      "name": "zanshin",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zanshin"
+    },
+    {
+      "name": "zathura-cb",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura-cb"
+    },
+    {
+      "name": "zathura-djvu",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura-djvu"
+    },
+    {
+      "name": "zathura-pdf-mupdf",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura-pdf-mupdf"
+    },
+    {
+      "name": "zathura-pdf-poppler",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura-pdf-poppler"
+    },
+    {
+      "name": "zathura-ps",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura-ps"
+    },
+    {
+      "name": "zathura",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zathura"
+    },
+    {
+      "name": "zeal",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zeal"
+    },
+    {
+      "name": "zen-browser",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zen-browser"
+    },
+    {
+      "name": "zenity",
+      "type": "generic",
+      "build_system": "autotools",
+      "binary": "bin/zenity"
+    }
+  ]
+}

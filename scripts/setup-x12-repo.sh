@@ -1,53 +1,53 @@
 #!/data/data/com.termux/files/usr/bin/bash
 # X12 Repo Setup Script
 # ======================
-# Installs the required Termux build tools, clones the project,
-# and builds the X12 engine locally on-device.
+# Adds the x12-repo as a Termux package source and installs
+# the X12 engine library.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/vigilant6271/x12-repo/635a1b5/scripts/setup-x12-repo.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/x12-repo/x12-repo/main/scripts/setup-x12-repo.sh | bash
 
 set -euo pipefail
 
-REPO_OWNER="${REPO_OWNER:-vigilant6271}"
-REPO_NAME="${REPO_NAME:-x12-repo}"
-REPO_BRANCH="${REPO_BRANCH:-main}"
-INSTALL_DIR="${INSTALL_DIR:-$HOME/x12-repo}"
-GIT_URL="https://github.com/${REPO_OWNER}/${REPO_NAME}.git"
+REPO_URL="https://x12-repo.github.io/x12-repo"
+SOURCES_DIR="${PREFIX}/etc/apt/sources.list.d"
+SOURCE_FILE="${SOURCES_DIR}/x12-repo.list"
 
-printf '%s\n' "X12 Repo bootstrap"
-printf '%s\n' "=================="
+echo "╔══════════════════════════════════════════╗"
+echo "║  X12 Repo — Performance-Enhanced Packages║"
+echo "╚══════════════════════════════════════════╝"
+echo ""
 
+# Check we're in Termux
 if [ ! -d "${PREFIX}" ]; then
     echo "ERROR: This script must run inside Termux."
     exit 1
 fi
 
-pkg update -y
-pkg install -y git clang make python python-venv
+# Add source
+mkdir -p "${SOURCES_DIR}"
+echo "deb [trusted=yes] ${REPO_URL} x12 main" > "${SOURCE_FILE}"
+echo "✓ Added x12-repo source: ${SOURCE_FILE}"
 
-if [ ! -d "${INSTALL_DIR}/.git" ]; then
-    echo "Cloning ${GIT_URL} into ${INSTALL_DIR}..."
-    git clone --depth 1 --branch "${REPO_BRANCH}" "${GIT_URL}" "${INSTALL_DIR}"
-else
-    echo "Repo already present at ${INSTALL_DIR}; updating..."
-    git -C "${INSTALL_DIR}" pull --ff-only origin "${REPO_BRANCH}"
-fi
+# Update package lists
+echo "Updating package lists..."
+apt-get update
 
-cd "${INSTALL_DIR}"
-make -C engine clean
-make -C engine TARGET_ARCH=aarch64 -j"$(nproc 2>/dev/null || echo 2)"
-make -C engine install PREFIX="${PREFIX}"
-
-if [ -x "${PREFIX}/bin/x12-info" ]; then
-    echo ""
-    "${PREFIX}/bin/x12-info" | head -n 20 || true
-fi
+# Install X12 engine library (required by all x12 packages)
+echo "Installing libx12engine..."
+apt-get install -y libx12engine
 
 echo ""
-echo "Setup complete."
-echo "Run:"
-echo "  cd ${INSTALL_DIR}"
-echo "  python3 ci/orchestrator.py --engine-only"
+echo "✓ X12 Repo setup complete!"
 echo ""
-echo "This repo is ready to test on Termux."
+echo "You can now install x12-enhanced packages:"
+echo "  pkg install alacritty-x12    # Terminal (x12-enhanced)"
+echo "  pkg install dolphin-x12      # File manager (x12-enhanced)"
+echo "  pkg install chromium-x12     # Browser (x12-enhanced)"
+echo "  pkg install vlc-x12          # Media player (x12-enhanced)"
+echo ""
+echo "Each package includes:"
+echo "  • Speed:      O3 + LTO + dead-code elimination"
+echo "  • Smoothness: Frame-pacing + render backend selection"
+echo "  • Adaptive:   Runtime CPU/GPU/RAM detection"
+echo "  • Automatic:  Zero config — engine decides everything"

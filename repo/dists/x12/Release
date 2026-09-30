@@ -5,7 +5,7 @@ Codename: x12
 Components: main
 Architectures: aarch64 arm x86_64
 Description: Termux x11-packages rebuilt with X12 Adaptive Performance Engine
-Date: Wed, 30 Sep 2026 23:19:51 +0000
+Date: Wed, 30 Sep 2026 23:32:53 +0000
 MD5Sum:
  593bd7ba36bc807858681a3aba0215ff   317964 main/binary-aarch64/Packages
  b95e27363c21cc0186f02c5fd0e5af9d   314152 main/binary-arm/Packages

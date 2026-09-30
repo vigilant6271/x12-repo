@@ -86,6 +86,17 @@ def build_engine(arch: str, dry_run: bool) -> bool:
         env["PREFIX"]      = os.environ.get(
             "TERMUX_PREFIX", "/data/data/com.termux/files/usr"
         )
+
+        paths = [
+            "/mingw64/bin",
+            "/usr/local/bin",
+            "/usr/bin",
+            "/bin",
+            "/opt/bin",
+            os.environ.get("PATH", ""),
+        ]
+        env["PATH"] = ":".join(p for p in paths if p)
+
         result = subprocess.run(
             ["make", "-C", str(ENGINE_DIR), "all"],
             capture_output=True, text=True, timeout=300, env=env
@@ -131,13 +142,25 @@ def build_package(pkg_name: str, arch: str, dry_run: bool) -> BuildResult:
         cmd = ["bash", "-n", str(build_sh)]
 
     try:
+        env = os.environ.copy()
+        env["TERMUX_ARCH"] = arch
+        env["PATH"] = ":".join(
+            p for p in [
+                "/mingw64/bin",
+                "/usr/local/bin",
+                "/usr/bin",
+                "/bin",
+                "/opt/bin",
+                env.get("PATH", ""),
+            ] if p
+        )
         proc = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
             timeout=3600,
             cwd=str(pkg_dir),
-            env={**os.environ, "TERMUX_ARCH": arch},
+            env=env,
         )
         result.log_lines = proc.stdout.splitlines()[-50:]
 

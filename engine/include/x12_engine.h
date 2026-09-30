@@ -23,6 +23,7 @@ extern "C" {
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
 
 /* ── Version ──────────────────────────────────────────────────────────── */
 #define X12_ENGINE_VERSION_MAJOR  1

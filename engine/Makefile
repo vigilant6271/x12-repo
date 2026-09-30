@@ -2,7 +2,12 @@
 # Builds libx12engine.so and x12-info diagnostic tool
 
 CC      ?= clang
-CFLAGS  := -O3 -march=native -flto=thin -fPIC \
+LTO_FLAG := -flto
+ifneq ($(filter clang%,$(shell $(CC) --version 2>/dev/null | head -n 1)),)
+  LTO_FLAG := -flto=thin
+endif
+
+CFLAGS  := -O3 -march=native $(LTO_FLAG) -fPIC \
            -Wall -Wextra -Wno-unused-parameter \
            -I./include \
            -ffunction-sections -fdata-sections

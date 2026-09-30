@@ -27,12 +27,19 @@
 #include <string.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <stddef.h>
+#include <limits.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <time.h>
 #include <errno.h>
 #include <pthread.h>
+#include <strings.h>
+#if defined(__linux__) || defined(__ANDROID__)
 #include <sys/sysinfo.h>
+#elif defined(_WIN32)
+#include <windows.h>
+#endif
 #include <sys/stat.h>
 
 #ifdef __aarch64__
@@ -116,7 +123,13 @@ static void x12_detect_cpu(X12HardwareProfile *hw) {
 #endif
 
     /* Core count */
+#if defined(__linux__) || defined(__ANDROID__)
     hw->cpu_cores = (int)sysconf(_SC_NPROCESSORS_ONLN);
+#else
+    SYSTEM_INFO si;
+    GetSystemInfo(&si);
+    hw->cpu_cores = (int)si.dwNumberOfProcessors;
+#endif
     if (hw->cpu_cores <= 0) hw->cpu_cores = 2;
 
     /* Detect big.LITTLE split: read /proc/cpuinfo for different max freqs */
@@ -184,6 +197,7 @@ static void x12_detect_cpu(X12HardwareProfile *hw) {
 }
 
 static void x12_detect_memory(X12HardwareProfile *hw) {
+#if defined(__linux__) || defined(__ANDROID__)
     struct sysinfo si;
     if (sysinfo(&si) == 0) {
         hw->ram_total_kb = (uint64_t)si.totalram * si.mem_unit / 1024ULL;
@@ -203,6 +217,10 @@ static void x12_detect_memory(X12HardwareProfile *hw) {
             fclose(f);
         }
     }
+#else
+    hw->ram_total_kb = 0;
+    hw->ram_avail_kb = 0;
+#endif
     hw->is_low_memory = (hw->ram_total_kb < X12_LOW_RAM_KB);
 }
 
@@ -363,10 +381,12 @@ static void *x12_monitor_fn(void *arg) {
         eng->hw.thermal_level = new_thermal;
 
         /* Re-evaluate RAM */
+#if defined(__linux__) || defined(__ANDROID__)
         struct sysinfo si;
         if (sysinfo(&si) == 0) {
             eng->hw.ram_avail_kb = (uint64_t)si.freeram * si.mem_unit / 1024ULL;
         }
+#endif
 
         /* Re-run mode selection */
         X12PerfMode new_mode = x12_select_mode(&eng->hw);
@@ -417,7 +437,11 @@ X12Engine *x12_init(const X12Config *cfg) {
 
     /* Start monitor thread */
     eng->monitor_running = true;
-    pthread_create(&eng->monitor_thread, NULL, x12_monitor_fn, eng);
+    if (pthread_create(&eng->monitor_thread, NULL, x12_monitor_fn, eng) != 0) {
+        pthread_mutex_destroy(&eng->lock);
+        free(eng);
+        return NULL;
+    }
 
     if (eng->cfg.verbose) {
         x12_dump_status(eng);
@@ -427,8 +451,10 @@ X12Engine *x12_init(const X12Config *cfg) {
 
 void x12_shutdown(X12Engine *eng) {
     if (!eng) return;
-    eng->monitor_running = false;
-    pthread_join(eng->monitor_thread, NULL);
+    if (eng->monitor_running) {
+        eng->monitor_running = false;
+        pthread_join(eng->monitor_thread, NULL);
+    }
     pthread_mutex_destroy(&eng->lock);
     free(eng);
 }

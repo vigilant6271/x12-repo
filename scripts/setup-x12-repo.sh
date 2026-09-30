@@ -5,7 +5,7 @@
 # and builds the X12 engine locally on-device.
 #
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/vigilant6271/x12-repo/main/scripts/setup-x12-repo.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/vigilant6271/x12-repo/74e175a/scripts/setup-x12-repo.sh | bash
 
 set -euo pipefail
 

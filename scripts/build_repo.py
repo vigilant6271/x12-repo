@@ -16,7 +16,7 @@ import gzip
 from pathlib import Path
 from datetime import datetime, timezone
 
-REPO_ROOT    = Path("/root/x12-repo")
+REPO_ROOT    = Path(__file__).resolve().parent.parent
 STATS_FILE   = REPO_ROOT / "packages/_stats.json"
 PACKAGES_JSON= REPO_ROOT / "repo/packages.json"
 DIST_DIR     = REPO_ROOT / "repo/dists/x12"
@@ -259,7 +259,7 @@ echo "  • Smoothness: Frame-pacing + render backend selection"
 echo "  • Adaptive:   Runtime CPU/GPU/RAM detection"
 echo "  • Automatic:  Zero config — engine decides everything"
 """
-    (REPO_ROOT / "scripts/setup-x12-repo.sh").write_text(script)
+    (REPO_ROOT / "scripts/setup-x12-repo.sh").write_text(script, encoding="utf-8")
     os.chmod(REPO_ROOT / "scripts/setup-x12-repo.sh", 0o755)
     print("  Wrote setup-x12-repo.sh")
 

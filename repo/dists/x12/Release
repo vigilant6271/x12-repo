@@ -5,16 +5,16 @@ Codename: x12
 Components: main
 Architectures: aarch64 arm x86_64
 Description: Termux x11-packages rebuilt with X12 Adaptive Performance Engine
-Date: Fri, 25 Sep 2026 14:06:27 +0000
+Date: Wed, 30 Sep 2026 23:19:51 +0000
 MD5Sum:
- 87ac346ac086fc62e8319f298e8018ce   307482 main/binary-aarch64/Packages
- 0473e12e92c4aaf3ca9e1393fc0c2078   303670 main/binary-arm/Packages
- 438aee38cb3c587f1d7be6c8563daa09   306529 main/binary-x86_64/Packages
+ 593bd7ba36bc807858681a3aba0215ff   317964 main/binary-aarch64/Packages
+ b95e27363c21cc0186f02c5fd0e5af9d   314152 main/binary-arm/Packages
+ 3ccc9c0b8bede28dc0f73fdb7b1b7e43   317011 main/binary-x86_64/Packages
 SHA1:
- 9873a68937c4c19cc2fab3080b218bae55670219   307482 main/binary-aarch64/Packages
- db3eb509ff2f35aa495ba193df5220a286be46b0   303670 main/binary-arm/Packages
- 44472b01d30bc310bc0e7881deb59ff840ba4832   306529 main/binary-x86_64/Packages
+ 8095433337b0da0c6db653b2b05aef1ff0836601   317964 main/binary-aarch64/Packages
+ 3160748c340846c44b4e73a0764cc32d4ea0a5d4   314152 main/binary-arm/Packages
+ 53a143be5821c57e22274b2e302c9267e609824b   317011 main/binary-x86_64/Packages
 SHA256:
- ff55ef3fb93ee06f6bfd59b98d5e7c7cb4b0a511951cf01889f45b79afdecfc4   307482 main/binary-aarch64/Packages
- 47c7572e52d02ac32653ef73346a36889509b813a4c36a05326ed6fb4594f478   303670 main/binary-arm/Packages
- df6d1bf70544a45d6473bd27d73964e8bb58b13a3d9464bb36e84f65c9b01577   306529 main/binary-x86_64/Packages
+ 0f3c961877363b871d2b137d815ad148bd6fd94a2829721c420629c1623ffeeb   317964 main/binary-aarch64/Packages
+ e92ade411261398b85341a022b0b66360658b64e596723ac78df389a4b3c0f49   314152 main/binary-arm/Packages
+ 472c8af126143bd7ca9427f043e4944bb4be07ae3a74e7f2c2108d9b4707d855   317011 main/binary-x86_64/Packages

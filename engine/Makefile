@@ -1,7 +1,7 @@
 # X12 Engine Makefile
 # Builds libx12engine.so and x12-info diagnostic tool
 
-CC      ?= clang
+CC ?= $(shell command -v clang 2>/dev/null || command -v gcc 2>/dev/null || echo gcc)
 LTO_FLAG := -flto
 ifneq ($(filter clang%,$(shell $(CC) --version 2>/dev/null | head -n 1)),)
   LTO_FLAG := -flto=thin
@@ -13,14 +13,18 @@ CFLAGS  := -O3 -march=native $(LTO_FLAG) -fPIC \
            -ffunction-sections -fdata-sections
 LDFLAGS := -shared -Wl,--gc-sections -Wl,-soname,libx12engine.so.1 -lpthread
 
-# Android/Termux cross-compile target
+# Android/Termux cross-compile target only when the matching toolchain exists.
 ifeq ($(TARGET_ARCH),aarch64)
-  CC      = aarch64-linux-android-clang
-  CFLAGS += -target aarch64-linux-android21 -march=armv8-a+simd+crypto+dotprod
+  ifneq ($(shell command -v aarch64-linux-android-clang 2>/dev/null),)
+    CC      = aarch64-linux-android-clang
+    CFLAGS += -target aarch64-linux-android21 -march=armv8-a+simd+crypto+dotprod
+  endif
 endif
 ifeq ($(TARGET_ARCH),arm)
-  CC      = arm-linux-androideabi-clang
-  CFLAGS += -target armv7a-linux-androideabi21 -mfpu=neon -mfloat-abi=softfp
+  ifneq ($(shell command -v arm-linux-androideabi-clang 2>/dev/null),)
+    CC      = arm-linux-androideabi-clang
+    CFLAGS += -target armv7a-linux-androideabi21 -mfpu=neon -mfloat-abi=softfp
+  endif
 endif
 
 SRC     := src/x12_engine.c

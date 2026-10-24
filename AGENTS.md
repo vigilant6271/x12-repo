@@ -28,7 +28,12 @@ Nothing here needs secrets.
 - **`engine`** (worker, one-shot) — builds `libx12engine` + `x12-info` from
   `./engine` and prints the engine's hardware/mode report. The engine source is
   mounted read-only and built in `/tmp` inside the container, so the checkout
-  stays clean. Read it with `docker compose -f docker-compose.base44.yml logs engine`.
+  stays clean. Because it is a job that finishes (exit 0), it sits behind the
+  `tools` profile and is **not** started by `up` — run it on demand:
+  ```bash
+  docker compose -f docker-compose.base44.yml run --rm engine
+  ```
+  `docker compose ps` therefore only lists the (long-running) repository server.
 
 Live reload: there is no dev server here, but the nginx bind mount means edits to
 files under `repo/` are served immediately — no restart needed.
@@ -38,7 +43,7 @@ files under `repo/` are served immediately — no restart needed.
 ```bash
 curl -s http://localhost:3000/dists/x12/Release | head        # APT Release metadata
 curl -s http://localhost:3000/dists/x12/main/binary-aarch64/Packages | head
-docker compose -f docker-compose.base44.yml logs engine       # engine diagnostics
+docker compose -f docker-compose.base44.yml run --rm engine   # engine diagnostics
 ```
 
 The engine report must show an `[X12 Engine v1.0.0]` block with CPU/RAM/Mode

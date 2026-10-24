@@ -8,11 +8,16 @@
 # Services:
 #   apt-repo  (web, port 3000)  nginx serving ./repo — this is what the preview
 #                               shows, and what `apt` would download from.
+#                               Started by `up`.
 #   engine    (worker, one-shot) builds libx12engine + x12-info from ./engine in
 #                               a scratch dir inside the container (the source
 #                               tree is mounted read-only, so nothing is written
-#                               back into the repo) and runs the diagnostics.
-#                               Inspect it with: docker compose logs engine
+#                               back into the repo) and prints the diagnostics.
+#                               It is a build job that finishes, so it lives
+#                               behind the "tools" profile and is NOT part of
+#                               `up`. Run it on demand with:
+#                                 docker compose -f docker-compose.base44.yml \
+#                                   run --rm engine
 #
 # The repository indexes are committed artifacts, so no generation step runs on
 # startup. To regenerate them after editing packages/_stats.json, run on the host:
@@ -46,9 +51,10 @@ services:
       retries: 5
       start_period: 5s
 
-  # ── libx12engine + x12-info diagnostic (one-shot, logs the engine output) ──
+  # ── libx12engine + x12-info diagnostic (on-demand build job, "tools" profile) ──
   engine:
     image: gcc:14
+    profiles: ["tools"]
     labels:
       base44.project: "X12 Engine build"
       base44.kind: "worker"

@@ -1,0 +1,68 @@
+# Base44 development environment for X12-Repo
+# ===========================================
+#
+# This project is not a web application: it is the build infrastructure for the
+# X12 Termux package repository. Its deliverable is the APT repository tree in
+# ./repo, published over HTTP (upstream: https://x12-repo.github.io/x12-repo).
+#
+# Services:
+#   apt-repo  (web, port 3000)  nginx serving ./repo — this is what the preview
+#                               shows, and what `apt` would download from.
+#   engine    (worker, one-shot) builds libx12engine + x12-info from ./engine in
+#                               a scratch dir inside the container (the source
+#                               tree is mounted read-only, so nothing is written
+#                               back into the repo) and runs the diagnostics.
+#                               Inspect it with: docker compose logs engine
+#
+# The repository indexes are committed artifacts, so no generation step runs on
+# startup. To regenerate them after editing packages/_stats.json, run on the host:
+#   python3 scripts/build_repo.py
+#
+# No environment variables or external credentials are required.
+#
+# Usage: docker compose -f docker-compose.base44.yml up -d
+
+name: x12-repo
+
+services:
+
+  # ── APT repository over HTTP (the user-facing entry point, port 3000) ──────
+  apt-repo:
+    image: nginx:alpine
+    labels:
+      base44.project: "X12 Package Repository"
+      base44.kind: "web"
+      base44.port: "3000"
+    ports:
+      - "3000:80"
+    volumes:
+      - ./repo:/usr/share/nginx/html:ro
+      - ./nginx.base44.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: on-failure
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/dists/x12/Release || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+
+  # ── libx12engine + x12-info diagnostic (one-shot, logs the engine output) ──
+  engine:
+    image: gcc:14
+    labels:
+      base44.project: "X12 Engine build"
+      base44.kind: "worker"
+    volumes:
+      - ./engine:/src:ro
+    command:
+      - sh
+      - -ec
+      - |
+        rm -rf /tmp/engine
+        cp -r /src /tmp/engine
+        make -C /tmp/engine all
+        echo "--- x12-info ---"
+        /tmp/engine/build/x12-info
+        echo "--- artifacts ---"
+        ls -l /tmp/engine/build/
+    restart: "no"

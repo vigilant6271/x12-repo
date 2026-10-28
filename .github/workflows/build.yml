@@ -18,6 +18,9 @@ on:
         type: choice
         options: [aarch64, arm, x86_64]
 
+permissions:
+  contents: write
+
 env:
   TERMUX_PREFIX: /data/data/com.termux/files/usr
   REPO_URL: https://github.com/x12-repo/x12-repo

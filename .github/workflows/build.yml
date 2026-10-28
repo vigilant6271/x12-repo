@@ -18,11 +18,36 @@ on:
         type: choice
         options: [aarch64, arm, x86_64]
 
+permissions:
+  contents: write
+
 env:
   TERMUX_PREFIX: /data/data/com.termux/files/usr
   REPO_URL: https://github.com/x12-repo/x12-repo
 
 jobs:
+  update-repo:
+    name: Update APT repo indexes
+    needs: [validate-packages]
+    runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild repo indexes
+        run: python3 scripts/build_repo.py
+
+      - name: Verify Release file
+        run: |
+          cat repo/dists/x12/Release
+          echo "---"
+          wc -l repo/dists/x12/main/binary-aarch64/Packages
+
+      - name: Commit updated indexes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "ci: update APT repo indexes [skip ci]"
+          file_pattern: "repo/dists/**"
 
   # ── Build X12 Engine ──────────────────────────────────────────────────
   build-engine:
